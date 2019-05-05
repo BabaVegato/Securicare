@@ -9,9 +9,6 @@ class Screen1View : public Screen1ViewBase
 {
 public:
 
-	TextAreaWithOneWildcard txt;
- 	Unicode::UnicodeChar txtBuffer[3];
-
     Screen1View();
     virtual ~Screen1View() {}
     virtual void setupScreen();
