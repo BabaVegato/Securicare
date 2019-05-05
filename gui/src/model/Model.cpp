@@ -28,7 +28,7 @@ void Model::tick()
 
  // use filter variable to make sure we only trigger this once per input change.
  // Sample pin B12
-GPIOG->ODR |= (1 << 13);
+
  if (HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13)){
  		updateLEDVERTEState(1);
  }
@@ -50,12 +50,12 @@ void Model::updateLEDROUGEState(bool state){
 
 }
 void Model::updateLEDVERTEState(bool state){
-	/*if (state == 1){
+	if (state == 1){
 		GPIOG->ODR |= (1 << 13);
 	}
 	else{
 		GPIOG->ODR &= ~(1 << 13);
-	}*/
+	}
 
 }
 void Model::updateLEDState(bool state){
