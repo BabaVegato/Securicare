@@ -1,0 +1,26 @@
+Converting images
+STM32 ST-LINK CLI v3.4.0.0
+STM32 ST-LINK Command Line Interface
+
+ST-LINK SN: 066DFF494849887767211239
+ST-LINK Firmware version: V2J31M21
+Connected via SWD.
+SWD Frequency = 4000K.
+Target voltage = 2.9 V
+Connection mode: Normal
+Reset mode: Hardware reset
+Device ID: 0x419 
+Device flash Size: 2048 Kbytes
+Device family: STM32F42xxx/F43xxx
+
+Loading file...
+Flash Programming:
+  File : TouchGFX/build/bin/intflash.hex
+  Address : 0x08000000
+Memory programming...
+±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± 0% 0%€€€€€€€€€€€ 22%€€€€€€€€€€€ 45%€€€€€€€€€€€ 67%€€€€€€€€€€€ 89%€€€€€€ 100%
+Memory programmed in 20s and 390ms.
+Programming Complete.
+
+MCU Reset.
+

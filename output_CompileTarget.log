@@ -1,0 +1,5 @@
+Converting images
+Compiling TouchGFX/gui/src/model/Model.cpp
+Linking TouchGFX/build/bin/target.elf
+Producing additional output formats...
+  intflash.hex - Internal flash, hex

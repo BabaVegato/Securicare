@@ -1,0 +1,670 @@
+{
+  "Application": {
+    "Screens": [
+      {
+        "Components": [
+          {
+            "FileName": "__designer\\blue_textures_binding_light.png",
+            "Alpha": 255,
+            "Style": "Texture2",
+            "OffsetX": 0,
+            "OffsetY": 0,
+            "Name": "TILEDIMG_BG_Screen1",
+            "X": 0,
+            "Y": 0,
+            "Width": 240,
+            "Height": 320,
+            "Type": "TiledImage",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "InitialStatePressed": false,
+            "Pressed": "__designer\\blue_togglebars_toggle_round_large_button_on.png",
+            "Released": "__designer\\blue_togglebars_toggle_round_large_button_off.png",
+            "Alpha": 255,
+            "Style": "Style4",
+            "Name": "toggleButton1",
+            "X": 56,
+            "Y": 209,
+            "Width": 128,
+            "Height": 38,
+            "Type": "ToggleButton",
+            "Visible": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Pressed": "__designer\\blue_buttons_round_edge_icon_button_pressed.png",
+            "Released": "__designer\\blue_buttons_round_edge_icon_button.png",
+            "Alpha": 255,
+            "Style": "Style1",
+            "Name": "BTN_Go_Screen_Auth",
+            "X": 19,
+            "Y": 243,
+            "Width": 60,
+            "Height": 60,
+            "Type": "Button",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId2",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 21,
+              "Green": 156,
+              "Blue": 228
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "TXT_Bonjour",
+            "X": 28,
+            "Y": 16,
+            "Width": 185,
+            "Height": 65,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "RelativeFilename": "__designer\\dark_icons_settings_32.png",
+            "Alpha": 255,
+            "Name": "image1",
+            "X": 32,
+            "Y": 257,
+            "Width": 32,
+            "Height": 32,
+            "Type": "Image",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId3",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 21,
+              "Green": 156,
+              "Blue": 228
+            },
+            "Alpha": 0,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Wildcard1": {
+              "TextId": "SingleUseId4",
+              "UseBuffer": true,
+              "BufferSize": 2
+            },
+            "Name": "TXT_Nb_Voleurs",
+            "X": 42,
+            "Y": 81,
+            "Width": 150,
+            "Height": 108,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Pressed": "__designer\\blue_buttons_round_edge_icon_button_pressed.png",
+            "Released": "__designer\\blue_buttons_round_edge_icon_button.png",
+            "Alpha": 255,
+            "Style": "Style1",
+            "Name": "BTN_Go_Screen_Alarmes",
+            "X": 160,
+            "Y": 243,
+            "Width": 60,
+            "Height": 60,
+            "Type": "Button",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "RelativeFilename": "__designer\\dark_icons_map_32.png",
+            "Alpha": 255,
+            "Name": "image2",
+            "X": 175,
+            "Y": 256,
+            "Width": 31,
+            "Height": 31,
+            "Type": "Image",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "rien",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "toggleButton1",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "FunctionName": "updateLEDState",
+              "Type": "ActionCustom"
+            }
+          },
+          {
+            "InteractionName": "Go_to_Screen_Auth",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "BTN_Go_Screen_Auth",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "ScreenTransitionType": "ScreenTransitionCover",
+              "ScreenTransitionDirection": "West",
+              "ActionComponent": "ScreenAuth",
+              "Type": "ActionGotoScreen"
+            }
+          },
+          {
+            "InteractionName": "Inter_Go_To_AlarmScreen",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "BTN_Go_Screen_Alarmes",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "ScreenTransitionType": "ScreenTransitionCover",
+              "ScreenTransitionDirection": "East",
+              "ActionComponent": "ScreenAlarme",
+              "Type": "ActionGotoScreen"
+            }
+          },
+          {
+            "InteractionName": "Interaction1",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "Type": "TriggerScreenEntered"
+            },
+            "Action": {
+              "Alpha": 255,
+              "Easing": "Expo",
+              "EasingOption": "In",
+              "Duration": 800,
+              "ActionComponent": "TXT_Nb_Voleurs",
+              "Type": "ActionFade"
+            }
+          }
+        ],
+        "Name": "Screen1",
+        "OverrideDefaultBufferSize": false,
+        "CanvasBufferSize": 0
+      },
+      {
+        "Components": [
+          {
+            "FileName": "__designer\\blue_textures_tweed.png",
+            "Alpha": 255,
+            "Style": "Texture17",
+            "OffsetX": 0,
+            "OffsetY": 0,
+            "Name": "tiledImage1",
+            "X": 0,
+            "Y": 0,
+            "Width": 240,
+            "Height": 320,
+            "Type": "TiledImage",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "FileName": "__designer\\blue_textures_carbon_fibre.png",
+            "Alpha": 255,
+            "Style": "Texture3",
+            "OffsetX": 0,
+            "OffsetY": 0,
+            "Name": "TiledIMG_Demande_Code",
+            "X": 19,
+            "Y": 8,
+            "Width": 202,
+            "Height": 107,
+            "Type": "TiledImage",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId1",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 254,
+              "Blue": 254
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "TXT_Demande_Code",
+            "X": 33,
+            "Y": 15,
+            "Width": 173,
+            "Height": 65,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Color": {
+              "Red": 6,
+              "Green": 86,
+              "Blue": 141
+            },
+            "Direction": "Right",
+            "Alpha": 255,
+            "FileNameBackground": "__designer\\blue_progressindicators_bg_medium_progress_indicator_bg_square_0_degrees.png",
+            "IndicatorPositionX": 2,
+            "IndicatorPositionY": 2,
+            "IndicatorPositionWidth": 180,
+            "IndicatorPositionHeight": 16,
+            "ProgressRangeMin": 0,
+            "ProgressRangeMax": 4,
+            "ProgressRangeSteps": 0,
+            "ProgressRangeStepsMin": 0,
+            "ProgressInitialValue": 0,
+            "Name": "boxProgress_Demande_Code",
+            "X": 28,
+            "Y": 88,
+            "Width": 184,
+            "Height": 20,
+            "Type": "BoxProgress",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Pressed": "__designer\\blue_buttons_round_edge_icon_button_pressed.png",
+            "Released": "__designer\\dark_buttons_round_icon_button.png",
+            "Alpha": 255,
+            "Name": "BTN_Back",
+            "X": 171,
+            "Y": 252,
+            "Width": 60,
+            "Height": 60,
+            "Type": "Button",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "RelativeFilename": "__designer\\dark_icons_next_arrow_48.png",
+            "Alpha": 255,
+            "Name": "IMG_Button_Back",
+            "X": 189,
+            "Y": 258,
+            "Width": 28,
+            "Height": 48,
+            "Type": "Image",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "Back_To_Screen1",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "BTN_Back",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "ScreenTransitionType": "ScreenTransitionCover",
+              "ScreenTransitionDirection": "East",
+              "ActionComponent": "Screen1",
+              "Type": "ActionGotoScreen"
+            }
+          },
+          {
+            "InteractionName": "Interaction1",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "ButtonKey": 0,
+              "Type": "TriggerPhysicalButtonClicked"
+            },
+            "Action": {
+              "Value": 1,
+              "ActionComponent": "boxProgress_Demande_Code",
+              "Type": "ActionSetValue"
+            }
+          }
+        ],
+        "Name": "ScreenAuth",
+        "OverrideDefaultBufferSize": false,
+        "CanvasBufferSize": 0
+      },
+      {
+        "Components": [
+          {
+            "FileName": "__designer\\blue_textures_mochagrunge.png",
+            "Alpha": 255,
+            "OffsetX": 0,
+            "OffsetY": 0,
+            "Name": "TILEDIMG_Background_Alarme",
+            "X": 0,
+            "Y": 0,
+            "Width": 240,
+            "Height": 320,
+            "Type": "TiledImage",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Pressed": "__designer\\dark_buttons_round_icon_button_pressed.png",
+            "Released": "__designer\\dark_buttons_round_icon_button.png",
+            "Alpha": 255,
+            "Name": "BUTTON_retour_Screen1",
+            "X": 5,
+            "Y": 254,
+            "Width": 60,
+            "Height": 60,
+            "Type": "Button",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "RelativeFilename": "__designer\\dark_icons_back_arrow_48.png",
+            "Alpha": 255,
+            "Name": "IMG_Back",
+            "X": 20,
+            "Y": 261,
+            "Width": 28,
+            "Height": 48,
+            "Type": "Image",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Components": [
+              {
+                "Components": [],
+                "Name": "Capteur3",
+                "X": 0,
+                "Y": 0,
+                "Width": 241,
+                "Height": 128,
+                "Type": "Container",
+                "Visible": true,
+                "Draggable": false,
+                "Clickable": false,
+                "Fadeable": false,
+                "Moveable": false
+              },
+              {
+                "Components": [],
+                "Name": "Capteur2",
+                "X": 0,
+                "Y": 0,
+                "Width": 241,
+                "Height": 128,
+                "Type": "Container",
+                "Visible": true,
+                "Draggable": false,
+                "Clickable": false,
+                "Fadeable": false,
+                "Moveable": false
+              },
+              {
+                "Components": [],
+                "Name": "Capteur1",
+                "X": 0,
+                "Y": 0,
+                "Width": 241,
+                "Height": 128,
+                "Type": "Container",
+                "Visible": true,
+                "Draggable": false,
+                "Clickable": false,
+                "Fadeable": false,
+                "Moveable": false
+              }
+            ],
+            "SwipeCutoff": 50,
+            "ShowPageIndicator": true,
+            "PageIndicatorX": 0,
+            "PageIndicatorY": 0,
+            "CenteredX": false,
+            "IndicatorImageNormal": "__designer\\dark_pageindicator_dot_indicator_small_normal.png",
+            "IndicatorImageHighlight": "__designer\\dark_pageindicator_dot_indicator_small_highlight.png",
+            "EndSwipeElasticWidth": 50,
+            "SelectedPage": "Capteur3",
+            "Style": "Style1",
+            "Name": "swipeContainer_Capteurs",
+            "X": 0,
+            "Y": 105,
+            "Width": 241,
+            "Height": 128,
+            "Type": "SwipeContainer",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "Go_To_SCREEN1",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "BUTTON_retour_Screen1",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "ScreenTransitionType": "ScreenTransitionCover",
+              "ScreenTransitionDirection": "West",
+              "ActionComponent": "Screen1",
+              "Type": "ActionGotoScreen"
+            }
+          }
+        ],
+        "Name": "ScreenAlarme",
+        "OverrideDefaultBufferSize": false,
+        "CanvasBufferSize": 0
+      }
+    ],
+    "CustomContainerDefinitions": [
+      {
+        "Components": [
+          {
+            "FileName": "__designer\\dark_backgrounds_main_bg_texture_320x240px.png",
+            "Alpha": 255,
+            "OffsetX": 0,
+            "OffsetY": 0,
+            "Name": "TILEDIMG",
+            "X": 0,
+            "Y": -72,
+            "Width": 240,
+            "Height": 283,
+            "Type": "TiledImage",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId5",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Wildcard1": {
+              "TextId": "SingleUseId6",
+              "UseBuffer": false,
+              "BufferSize": 0
+            },
+            "Name": "TXT_Capteur1",
+            "X": 20,
+            "Y": 16,
+            "Width": 129,
+            "Height": 36,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "InitialStatePressed": false,
+            "Pressed": "__designer\\dark_check_buttons_check_round_mark_active.png",
+            "Released": "__designer\\dark_check_buttons_check_round_mark_pressed.png",
+            "Alpha": 255,
+            "Name": "toggleButton_Capteur",
+            "X": 190,
+            "Y": 12,
+            "Width": 44,
+            "Height": 44,
+            "Type": "ToggleButton",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          }
+        ],
+        "Interactions": [],
+        "Name": "Container_Capteurs",
+        "X": 0,
+        "Y": 112,
+        "Width": 240,
+        "Height": 169,
+        "Type": "CustomContainerDefinition",
+        "Visible": true,
+        "Draggable": false,
+        "Clickable": false,
+        "Fadeable": false,
+        "Moveable": false
+      }
+    ],
+    "TextEntries": [
+      {
+        "TextEntryId": "SingleUseId1",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId2",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "RES_NB_Voleurs",
+        "IsResource": true
+      },
+      {
+        "TextEntryId": "SingleUseId3",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId4",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId5",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId6",
+        "IsResource": false
+      }
+    ],
+    "Name": "TestGPIO",
+    "Resolution": {
+      "Width": 240,
+      "Height": 320
+    },
+    "SelectedColorDepth": 16,
+    "StartupScreenName": "Screen1",
+    "SelectedStartupLanguage": "GB",
+    "Skin": "Blue",
+    "TouchGfxPath": "../../Middlewares/ST/TouchGFX/touchgfx",
+    "UIPath": ".",
+    "ApplicationTemplate": {
+      "Name": "STM32F429_DISCO",
+      "Version": "1.1.0",
+      "Description": "STM32F429_DISCO Application Template",
+      "AvailableColorDepths": [
+        16,
+        24
+      ],
+      "AvailableImageFormats": {
+        "16": {
+          "Opaque": "RGB565",
+          "NonOpaque": "ARGB8888"
+        },
+        "24": {
+          "Opaque": "RGB888",
+          "NonOpaque": "ARGB8888"
+        }
+      },
+      "AvailableResolutions": [
+        {
+          "Width": 240,
+          "Height": 320
+        }
+      ],
+      "PhysicalButtons": [],
+      "GenerateAssetsCommand": "make -f simulator/gcc/Makefile assets -j10",
+      "PostGenerateCommand": "touchgfx update_project --project-file=simulator/msvs/Application.vcxproj && touchgfx update_project --project-file=../EWARM/application.ewp && touchgfx update_project --project-file=../EWARM6/project.ewp && touchgfx update_project --project-file=../MDK-ARM/application.uvproj",
+      "CompileSimulatorCommand": "make -f simulator/gcc/Makefile -j10",
+      "RunSimulatorCommand": "build\\bin\\simulator.exe",
+      "CompileTargetCommand": "make -f ../gcc/Makefile -j8",
+      "FlashTargetCommand": "make -f ../gcc/Makefile -j8 flash"
+    }
+  },
+  "Version": "4.10.0",
+  "CreatedBy": "4.10.0"
+}

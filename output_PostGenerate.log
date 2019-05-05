@@ -1,0 +1,245 @@
+<File>
+  <FileName>Container_Capteurs.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/gui/src/containers/container_capteurs.cpp</FilePath>
+</File>
+<File>
+  <FileName>FrontendApplication.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/gui/src/common/frontendapplication.cpp</FilePath>
+</File>
+<File>
+  <FileName>Model.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/gui/src/model/model.cpp</FilePath>
+</File>
+<File>
+  <FileName>Screen1Presenter.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/gui/src/screen1_screen/screen1presenter.cpp</FilePath>
+</File>
+<File>
+  <FileName>Screen1View.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/gui/src/screen1_screen/screen1view.cpp</FilePath>
+</File>
+<File>
+  <FileName>ScreenAlarmePresenter.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/gui/src/screenalarme_screen/screenalarmepresenter.cpp</FilePath>
+</File>
+<File>
+  <FileName>ScreenAlarmeView.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/gui/src/screenalarme_screen/screenalarmeview.cpp</FilePath>
+</File>
+<File>
+  <FileName>ScreenAuthPresenter.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/gui/src/screenauth_screen/screenauthpresenter.cpp</FilePath>
+</File>
+<File>
+  <FileName>ScreenAuthView.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/gui/src/screenauth_screen/screenauthview.cpp</FilePath>
+</File>
+<File>
+  <FileName>ApplicationFontProvider.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/fonts/src/applicationfontprovider.cpp</FilePath>
+</File>
+<File>
+  <FileName>BitmapDatabase.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/images/src/bitmapdatabase.cpp</FilePath>
+</File>
+<File>
+  <FileName>blue_buttons_round_edge_icon_button.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/images/src/__designer/blue_buttons_round_edge_icon_button.cpp</FilePath>
+</File>
+<File>
+  <FileName>blue_buttons_round_edge_icon_button_pressed.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/images/src/__designer/blue_buttons_round_edge_icon_button_pressed.cpp</FilePath>
+</File>
+<File>
+  <FileName>blue_progressindicators_bg_medium_progress_indicator_bg_square_0_degrees.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/images/src/__designer/blue_progressindicators_bg_medium_progress_indicator_bg_square_0_degrees.cpp</FilePath>
+</File>
+<File>
+  <FileName>blue_textures_binding_light.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/images/src/__designer/blue_textures_binding_light.cpp</FilePath>
+</File>
+<File>
+  <FileName>blue_textures_carbon_fibre.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/images/src/__designer/blue_textures_carbon_fibre.cpp</FilePath>
+</File>
+<File>
+  <FileName>blue_textures_mochagrunge.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/images/src/__designer/blue_textures_mochagrunge.cpp</FilePath>
+</File>
+<File>
+  <FileName>blue_textures_tweed.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/images/src/__designer/blue_textures_tweed.cpp</FilePath>
+</File>
+<File>
+  <FileName>blue_togglebars_toggle_round_large_button_off.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/images/src/__designer/blue_togglebars_toggle_round_large_button_off.cpp</FilePath>
+</File>
+<File>
+  <FileName>blue_togglebars_toggle_round_large_button_on.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/images/src/__designer/blue_togglebars_toggle_round_large_button_on.cpp</FilePath>
+</File>
+<File>
+  <FileName>Container_CapteursBase.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/gui_generated/src/containers/container_capteursbase.cpp</FilePath>
+</File>
+<File>
+  <FileName>dark_backgrounds_main_bg_texture_320x240px.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/images/src/__designer/dark_backgrounds_main_bg_texture_320x240px.cpp</FilePath>
+</File>
+<File>
+  <FileName>dark_buttons_round_icon_button.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/images/src/__designer/dark_buttons_round_icon_button.cpp</FilePath>
+</File>
+<File>
+  <FileName>dark_buttons_round_icon_button_pressed.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/images/src/__designer/dark_buttons_round_icon_button_pressed.cpp</FilePath>
+</File>
+<File>
+  <FileName>dark_check_buttons_check_round_mark_active.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/images/src/__designer/dark_check_buttons_check_round_mark_active.cpp</FilePath>
+</File>
+<File>
+  <FileName>dark_check_buttons_check_round_mark_pressed.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/images/src/__designer/dark_check_buttons_check_round_mark_pressed.cpp</FilePath>
+</File>
+<File>
+  <FileName>dark_icons_back_arrow_48.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/images/src/__designer/dark_icons_back_arrow_48.cpp</FilePath>
+</File>
+<File>
+  <FileName>dark_icons_map_32.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/images/src/__designer/dark_icons_map_32.cpp</FilePath>
+</File>
+<File>
+  <FileName>dark_icons_next_arrow_48.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/images/src/__designer/dark_icons_next_arrow_48.cpp</FilePath>
+</File>
+<File>
+  <FileName>dark_icons_settings_32.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/images/src/__designer/dark_icons_settings_32.cpp</FilePath>
+</File>
+<File>
+  <FileName>dark_pageindicator_dot_indicator_small_highlight.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/images/src/__designer/dark_pageindicator_dot_indicator_small_highlight.cpp</FilePath>
+</File>
+<File>
+  <FileName>dark_pageindicator_dot_indicator_small_normal.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/images/src/__designer/dark_pageindicator_dot_indicator_small_normal.cpp</FilePath>
+</File>
+<File>
+  <FileName>Font_segoescb_40_4bpp.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/fonts/src/font_segoescb_40_4bpp.cpp</FilePath>
+</File>
+<File>
+  <FileName>Font_seguisb_30_4bpp.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/fonts/src/font_seguisb_30_4bpp.cpp</FilePath>
+</File>
+<File>
+  <FileName>Font_timesbd_27_4bpp.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/fonts/src/font_timesbd_27_4bpp.cpp</FilePath>
+</File>
+<File>
+  <FileName>FontGetters.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/fonts/src/fontgetters.cpp</FilePath>
+</File>
+<File>
+  <FileName>FrontendApplicationBase.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/gui_generated/src/common/frontendapplicationbase.cpp</FilePath>
+</File>
+<File>
+  <FileName>Kerning_segoescb_40_4bpp.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/fonts/src/kerning_segoescb_40_4bpp.cpp</FilePath>
+</File>
+<File>
+  <FileName>Kerning_seguisb_30_4bpp.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/fonts/src/kerning_seguisb_30_4bpp.cpp</FilePath>
+</File>
+<File>
+  <FileName>Kerning_timesbd_27_4bpp.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/fonts/src/kerning_timesbd_27_4bpp.cpp</FilePath>
+</File>
+<File>
+  <FileName>LanguageGb.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/texts/src/languagegb.cpp</FilePath>
+</File>
+<File>
+  <FileName>Screen1ViewBase.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/gui_generated/src/screen1_screen/screen1viewbase.cpp</FilePath>
+</File>
+<File>
+  <FileName>ScreenAlarmeViewBase.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/gui_generated/src/screenalarme_screen/screenalarmeviewbase.cpp</FilePath>
+</File>
+<File>
+  <FileName>ScreenAuthViewBase.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/gui_generated/src/screenauth_screen/screenauthviewbase.cpp</FilePath>
+</File>
+<File>
+  <FileName>Table_segoescb_40_4bpp.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/fonts/src/table_segoescb_40_4bpp.cpp</FilePath>
+</File>
+<File>
+  <FileName>Table_seguisb_30_4bpp.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/fonts/src/table_seguisb_30_4bpp.cpp</FilePath>
+</File>
+<File>
+  <FileName>Table_timesbd_27_4bpp.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/fonts/src/table_timesbd_27_4bpp.cpp</FilePath>
+</File>
+<File>
+  <FileName>Texts.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/texts/src/texts.cpp</FilePath>
+</File>
+<File>
+  <FileName>TypedTextDatabase.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/texts/src/typedtextdatabase.cpp</FilePath>
+</File>
