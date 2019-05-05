@@ -53,7 +53,7 @@ protected:
     /*
      * Wildcard Buffers
      */
-    static const uint16_t TXT_NB_VOLEURS_SIZE = 2;
+    static const uint16_t TXT_NB_VOLEURS_SIZE = 5;
     touchgfx::Unicode::UnicodeChar TXT_Nb_VoleursBuffer[TXT_NB_VOLEURS_SIZE];
 
 private:

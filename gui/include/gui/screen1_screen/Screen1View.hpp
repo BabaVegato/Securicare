@@ -18,6 +18,7 @@ public:
     virtual void tearDownScreen();
     void updateLEDState(bool);
     void updateTxt(int);
+    void updateWildcard(int);
 protected:
 };
 

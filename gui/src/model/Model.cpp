@@ -26,9 +26,6 @@ void Model::tick()
 
 #ifndef SIMULATOR
 
- // use filter variable to make sure we only trigger this once per input change.
- // Sample pin B12
-
  if (HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13)){
  		updateLEDVERTEState(1);
  }

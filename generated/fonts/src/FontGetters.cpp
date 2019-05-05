@@ -26,7 +26,7 @@ touchgfx::InternalFlashFont& getFont_seguisb_30_4bpp();
 
 touchgfx::InternalFlashFont& getFont_seguisb_30_4bpp()
 {
-    static touchgfx::InternalFlashFont seguisb_30_4bpp(glyphs_seguisb_30_4bpp, 19, 30, 7, 4, 3, 0, unicodes_seguisb_30_4bpp, kerning_seguisb_30_4bpp, 63, 0);
+    static touchgfx::InternalFlashFont seguisb_30_4bpp(glyphs_seguisb_30_4bpp, 27, 30, 7, 4, 3, 0, unicodes_seguisb_30_4bpp, kerning_seguisb_30_4bpp, 63, 0);
     return seguisb_30_4bpp;
 }
 

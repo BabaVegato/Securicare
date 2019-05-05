@@ -108,7 +108,7 @@
             "Wildcard1": {
               "TextId": "SingleUseId4",
               "UseBuffer": true,
-              "BufferSize": 2
+              "BufferSize": 5
             },
             "Name": "TXT_Nb_Voleurs",
             "X": 42,
