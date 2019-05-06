@@ -19,6 +19,10 @@ public:
 
     virtual ~ModelListener() {}
 
+    virtual void nbVoleursChanged() {}
+
+    virtual void avancementCodeAuthChanged() {}
+
     /**
      * Sets the model pointer to point to the Model object. Called automatically
      * when switching screen.

@@ -11,7 +11,7 @@ public:
     virtual ~ScreenAuthView() {}
     virtual void setupScreen();
     virtual void tearDownScreen();
-    virtual void updateTxt(int newValue);
+    virtual void updateBar(int);
 protected:
 };
 

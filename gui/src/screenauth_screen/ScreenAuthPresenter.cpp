@@ -8,10 +8,13 @@ ScreenAuthPresenter::ScreenAuthPresenter(ScreenAuthView& v)
 
 void ScreenAuthPresenter::activate()
 {
-
+	view.updateBar(model->getAvancementCodeAuth());
 }
 
 void ScreenAuthPresenter::deactivate()
 {
 
+}
+void ScreenAuthPresenter::nbVoleursChanged(){
+	view.updateBar(model->getAvancementCodeAuth());
 }

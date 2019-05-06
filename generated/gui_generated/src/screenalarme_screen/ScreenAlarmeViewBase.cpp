@@ -15,7 +15,7 @@ ScreenAlarmeViewBase::ScreenAlarmeViewBase() :
     BUTTON_retour_Screen1.setBitmaps(Bitmap(BITMAP_DARK_BUTTONS_ROUND_ICON_BUTTON_ID), Bitmap(BITMAP_DARK_BUTTONS_ROUND_ICON_BUTTON_PRESSED_ID));
     BUTTON_retour_Screen1.setAction(buttonCallback);
 
-    IMG_Back.setXY(20, 261);
+    IMG_Back.setXY(17, 261);
     IMG_Back.setBitmap(Bitmap(BITMAP_DARK_ICONS_BACK_ARROW_48_ID));
 
     swipeContainer_Capteurs.setXY(0, 105);

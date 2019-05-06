@@ -4,7 +4,7 @@
 #include <gui/model/stm32f429i_discovery.h>
 
 
-Model::Model() : modelListener(0)
+Model::Model() : modelListener(0), nbVoleurs(0), compteur(0), pret(true), avancementCodeAuth(0), codeAdmin(1234)
 {
 	//BSP_LED_Init(LED3);
 	//BSP_LED_ON(LED3);
@@ -25,27 +25,27 @@ void Model::tick()
 //updateLEDState(1);
 
 #ifndef SIMULATOR
+compteur++;
 
- if (HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13)){
- 		updateLEDVERTEState(1);
+ if (HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13) && pret == true){
+ 	updateLEDVERTEState(1);
+ 	nbVoleurs++;
+ 	avancementCodeAuth++;
+ 	modelListener->nbVoleursChanged();
+ 	pret = false;
  }
  else{
  	updateLEDVERTEState(0);
  }
+ if (compteur == 100){
+ 	compteur = 0;
+ 	pret = true;
+ }
 
 
-#endif 
+#endif
 }
 
-void Model::updateLEDROUGEState(bool state){
-	/*if (state == 1){
-		GPIOG->ODR |= (1 << 14);
-	}
-	else{
-		GPIOG->ODR &= ~(1 << 14);
-	}*/
-
-}
 void Model::updateLEDVERTEState(bool state){
 	if (state == 1){
 		GPIOG->ODR |= (1 << 13);
@@ -58,7 +58,6 @@ void Model::updateLEDVERTEState(bool state){
 void Model::updateLEDState(bool state){
 
 }
+void Model::EntreeCode(int nb){
 
-/*void Model::toggleButton1(){
-	modelListener->toggleButton1();
-}*/
+}

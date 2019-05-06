@@ -31,7 +31,7 @@ ScreenAuthViewBase::ScreenAuthViewBase() :
     boxProgress_Demande_Code.setValue(0);
 
     BTN_Back.setXY(171, 252);
-    BTN_Back.setBitmaps(Bitmap(BITMAP_DARK_BUTTONS_ROUND_ICON_BUTTON_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID));
+    BTN_Back.setBitmaps(Bitmap(BITMAP_DARK_BUTTONS_ROUND_ICON_BUTTON_ID), Bitmap(BITMAP_DARK_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID));
     BTN_Back.setAction(buttonCallback);
 
     IMG_Button_Back.setXY(189, 258);

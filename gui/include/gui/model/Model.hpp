@@ -38,13 +38,21 @@ public:
      */
     void tick();
     void updateLEDVERTEState(bool);
-    void updateLEDROUGEState(bool);
     void updateLEDState(bool);
+    int getnbVoleurs() const {return nbVoleurs;}
+    int getAvancementCodeAuth() const {return avancementCodeAuth;}
+    void EntreeCode(int);
 protected:
     /**
      * Pointer to the currently active presenter.
      */
     ModelListener* modelListener;
+private:
+    int nbVoleurs;
+    int compteur;
+    bool pret;
+    int avancementCodeAuth;
+    int codeAdmin;
 };
 
 #endif /* MODEL_HPP */

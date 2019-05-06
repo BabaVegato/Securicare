@@ -8,7 +8,7 @@ Screen1Presenter::Screen1Presenter(Screen1View& v)
 
 void Screen1Presenter::activate()
 {
-
+	view.updateWildcard(model->getnbVoleurs()); //ptet que cette ligne est de trop ?
 }
 
 void Screen1Presenter::deactivate()
@@ -19,4 +19,7 @@ void Screen1Presenter::deactivate()
 void Screen1Presenter::updateLEDState(bool state)
 {
 	model->updateLEDState(state);
+}
+void Screen1Presenter::nbVoleursChanged(){
+	view.updateWildcard(model->getnbVoleurs());
 }

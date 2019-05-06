@@ -25,6 +25,7 @@ public:
      */
     virtual void deactivate();
     virtual void updateLEDState(bool);
+    virtual void nbVoleursChanged();
     virtual ~Screen1Presenter() {};
 
 private:

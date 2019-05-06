@@ -10,7 +10,7 @@ Screen1View::Screen1View()
 void Screen1View::setupScreen()
 {
     Screen1ViewBase::setupScreen();
-    Screen1View::updateWildcard(3);
+    //Screen1View::updateWildcard(3);
 }
 
 void Screen1View::tearDownScreen()
