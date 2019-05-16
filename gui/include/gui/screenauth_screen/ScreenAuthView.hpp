@@ -12,6 +12,9 @@ public:
     virtual void setupScreen();
     virtual void tearDownScreen();
     virtual void updateBar(int);
+    virtual void updateWildcardCode(char, int);
+    virtual void updateAlphaTXT(int);
+    virtual void updateColorBar(uint8_t, uint8_t, uint8_t);
 protected:
 };
 

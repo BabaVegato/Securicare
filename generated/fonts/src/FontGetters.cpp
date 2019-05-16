@@ -26,7 +26,7 @@ touchgfx::InternalFlashFont& getFont_seguisb_30_4bpp();
 
 touchgfx::InternalFlashFont& getFont_seguisb_30_4bpp()
 {
-    static touchgfx::InternalFlashFont seguisb_30_4bpp(glyphs_seguisb_30_4bpp, 27, 30, 7, 4, 3, 0, unicodes_seguisb_30_4bpp, kerning_seguisb_30_4bpp, 63, 0);
+    static touchgfx::InternalFlashFont seguisb_30_4bpp(glyphs_seguisb_30_4bpp, 33, 30, 7, 4, 3, 0, unicodes_seguisb_30_4bpp, kerning_seguisb_30_4bpp, 63, 0);
     return seguisb_30_4bpp;
 }
 
@@ -38,7 +38,7 @@ touchgfx::InternalFlashFont& getFont_timesbd_27_4bpp();
 
 touchgfx::InternalFlashFont& getFont_timesbd_27_4bpp()
 {
-    static touchgfx::InternalFlashFont timesbd_27_4bpp(glyphs_timesbd_27_4bpp, 19, 27, 6, 4, 0, 0, unicodes_timesbd_27_4bpp, kerning_timesbd_27_4bpp, 63, 0);
+    static touchgfx::InternalFlashFont timesbd_27_4bpp(glyphs_timesbd_27_4bpp, 30, 27, 6, 4, 0, 0, unicodes_timesbd_27_4bpp, kerning_timesbd_27_4bpp, 63, 0);
     return timesbd_27_4bpp;
 }
 

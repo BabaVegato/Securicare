@@ -7,6 +7,24 @@ TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/gui/src/model/Model.o: \
  c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/Bitmap.hpp \
  TouchGFX/gui/include/gui/model/ModelListener.hpp \
  c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/hal/GPIO.hpp \
+ c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/Color.hpp \
+ c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/hal/HAL.hpp \
+ c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/hal/BlitOp.hpp \
+ c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/hal/Gestures.hpp \
+ c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/events/ClickEvent.hpp \
+ c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/Event.hpp \
+ c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/events/DragEvent.hpp \
+ c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/events/GestureEvent.hpp \
+ c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/UIEventListener.hpp \
+ c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/hal/DMA.hpp \
+ c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/hal/Atomic.hpp \
+ c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/Unicode.hpp \
+ c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/platform/driver/touch/TouchController.hpp \
+ c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/platform/driver/button/ButtonController.hpp \
+ c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/platform/core/MCUInstrumentation.hpp \
+ c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/lcd/LCD.hpp \
+ c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/Font.hpp \
+ c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/TextProvider.hpp \
  TouchGFX/gui/include/gui/model/stm32f429i_discovery.h \
  TouchGFX/gui/include/gui/model/stm32f4xx_hal.h \
  TouchGFX/gui/include/gui/model/stm32f4xx_hal_conf.h \
@@ -98,6 +116,42 @@ c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/
 TouchGFX/gui/include/gui/model/ModelListener.hpp:
 
 c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/hal/GPIO.hpp:
+
+c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/Color.hpp:
+
+c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/hal/HAL.hpp:
+
+c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/hal/BlitOp.hpp:
+
+c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/hal/Gestures.hpp:
+
+c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/events/ClickEvent.hpp:
+
+c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/Event.hpp:
+
+c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/events/DragEvent.hpp:
+
+c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/events/GestureEvent.hpp:
+
+c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/UIEventListener.hpp:
+
+c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/hal/DMA.hpp:
+
+c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/hal/Atomic.hpp:
+
+c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/Unicode.hpp:
+
+c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/platform/driver/touch/TouchController.hpp:
+
+c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/platform/driver/button/ButtonController.hpp:
+
+c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/platform/core/MCUInstrumentation.hpp:
+
+c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/lcd/LCD.hpp:
+
+c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/Font.hpp:
+
+c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/TextProvider.hpp:
 
 TouchGFX/gui/include/gui/model/stm32f429i_discovery.h:
 

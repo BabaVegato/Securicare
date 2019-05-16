@@ -21,7 +21,10 @@ public:
 
     virtual void nbVoleursChanged() {}
 
-    virtual void avancementCodeAuthChanged() {}
+    virtual void authChanged() {}
+    virtual void CodeEntreChanged() {}
+    virtual void ColorBarChanged() {}
+    virtual void AlphaTXTChanged() {}
 
     /**
      * Sets the model pointer to point to the Model object. Called automatically

@@ -55,6 +55,7 @@ TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/generated/gui_generated/src/screenaut
  c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/widgets/Box.hpp \
  c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/widgets/Button.hpp \
  c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp \
+ c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
  TouchGFX/generated/images/include/BitmapDatabase.hpp \
  TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp \
  c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/Color.hpp
@@ -168,6 +169,8 @@ c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/
 c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/widgets/Button.hpp:
 
 c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:
+
+c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:
 
 TouchGFX/generated/images/include/BitmapDatabase.hpp:
 

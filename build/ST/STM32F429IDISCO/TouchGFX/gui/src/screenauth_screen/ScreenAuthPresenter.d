@@ -55,7 +55,8 @@ TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/gui/src/screenauth_screen/ScreenAuthP
  c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/containers/progress_indicators/AbstractProgressIndicator.hpp \
  c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/widgets/Box.hpp \
  c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/widgets/Button.hpp \
- c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp
+ c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp \
+ c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp
 
 TouchGFX/gui/include/gui/screenauth_screen/ScreenAuthView.hpp:
 
@@ -168,3 +169,5 @@ c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/
 c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/widgets/Button.hpp:
 
 c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:
+
+c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:

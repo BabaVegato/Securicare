@@ -34,8 +34,46 @@ ScreenAuthViewBase::ScreenAuthViewBase() :
     BTN_Back.setBitmaps(Bitmap(BITMAP_DARK_BUTTONS_ROUND_ICON_BUTTON_ID), Bitmap(BITMAP_DARK_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID));
     BTN_Back.setAction(buttonCallback);
 
-    IMG_Button_Back.setXY(189, 258);
+    IMG_Button_Back.setXY(190, 258);
     IMG_Button_Back.setBitmap(Bitmap(BITMAP_DARK_ICONS_NEXT_ARROW_48_ID));
+
+    TXT_Codes.setXY(36, 147);
+    TXT_Codes.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    TXT_Codes.setLinespacing(0);
+    TXT_Codes.setAlpha(0);
+    TXT_Codes.setTypedText(TypedText(T_SINGLEUSEID7));
+
+    TXT_Code_Entre1.setXY(51, 115);
+    TXT_Code_Entre1.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    TXT_Code_Entre1.setLinespacing(0);
+    Unicode::snprintf(TXT_Code_Entre1Buffer, TXT_CODE_ENTRE1_SIZE, "%s", TypedText(T_SINGLEUSEID9).getText());
+    TXT_Code_Entre1.setWildcard(TXT_Code_Entre1Buffer);
+    TXT_Code_Entre1.resizeToCurrentText();
+    TXT_Code_Entre1.setTypedText(TypedText(T_SINGLEUSEID8));
+
+    TXT_Code_Entre2.setXY(90, 115);
+    TXT_Code_Entre2.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    TXT_Code_Entre2.setLinespacing(0);
+    Unicode::snprintf(TXT_Code_Entre2Buffer, TXT_CODE_ENTRE2_SIZE, "%s", TypedText(T_SINGLEUSEID11).getText());
+    TXT_Code_Entre2.setWildcard(TXT_Code_Entre2Buffer);
+    TXT_Code_Entre2.resizeToCurrentText();
+    TXT_Code_Entre2.setTypedText(TypedText(T_SINGLEUSEID10));
+
+    TXT_Code_Entre3.setXY(130, 115);
+    TXT_Code_Entre3.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    TXT_Code_Entre3.setLinespacing(0);
+    Unicode::snprintf(TXT_Code_Entre3Buffer, TXT_CODE_ENTRE3_SIZE, "%s", TypedText(T_SINGLEUSEID13).getText());
+    TXT_Code_Entre3.setWildcard(TXT_Code_Entre3Buffer);
+    TXT_Code_Entre3.resizeToCurrentText();
+    TXT_Code_Entre3.setTypedText(TypedText(T_SINGLEUSEID12));
+
+    TXT_Code_Entre4.setXY(169, 115);
+    TXT_Code_Entre4.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    TXT_Code_Entre4.setLinespacing(0);
+    Unicode::snprintf(TXT_Code_Entre4Buffer, TXT_CODE_ENTRE4_SIZE, "%s", TypedText(T_SINGLEUSEID15).getText());
+    TXT_Code_Entre4.setWildcard(TXT_Code_Entre4Buffer);
+    TXT_Code_Entre4.resizeToCurrentText();
+    TXT_Code_Entre4.setTypedText(TypedText(T_SINGLEUSEID14));
 
     add(tiledImage1);
     add(TiledIMG_Demande_Code);
@@ -43,6 +81,11 @@ ScreenAuthViewBase::ScreenAuthViewBase() :
     add(boxProgress_Demande_Code);
     add(BTN_Back);
     add(IMG_Button_Back);
+    add(TXT_Codes);
+    add(TXT_Code_Entre1);
+    add(TXT_Code_Entre2);
+    add(TXT_Code_Entre3);
+    add(TXT_Code_Entre4);
 }
 
 void ScreenAuthViewBase::setupScreen()

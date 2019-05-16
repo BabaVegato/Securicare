@@ -6,6 +6,24 @@ build/MINGW32_NT-6.2/gui/src/model/Model.o: gui/src/model/Model.cpp \
  ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/Bitmap.hpp \
  gui/include/gui/model/ModelListener.hpp \
  ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/hal/GPIO.hpp \
+ ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/Color.hpp \
+ ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/hal/HAL.hpp \
+ ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/hal/BlitOp.hpp \
+ ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/hal/Gestures.hpp \
+ ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/events/ClickEvent.hpp \
+ ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/Event.hpp \
+ ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/events/DragEvent.hpp \
+ ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/events/GestureEvent.hpp \
+ ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/UIEventListener.hpp \
+ ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/hal/DMA.hpp \
+ ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/hal/Atomic.hpp \
+ ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/Unicode.hpp \
+ ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/platform/driver/touch/TouchController.hpp \
+ ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/platform/driver/button/ButtonController.hpp \
+ ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/platform/core/MCUInstrumentation.hpp \
+ ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/lcd/LCD.hpp \
+ ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/Font.hpp \
+ ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/TextProvider.hpp \
  gui/include/gui/model/stm32f429i_discovery.h \
  gui/include/gui/model/stm32f4xx_hal.h \
  gui/include/gui/model/stm32f4xx_hal_conf.h \
@@ -94,6 +112,42 @@ gui/include/gui/model/Model.hpp:
 gui/include/gui/model/ModelListener.hpp:
 
 ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/hal/GPIO.hpp:
+
+../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/Color.hpp:
+
+../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/hal/HAL.hpp:
+
+../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/hal/BlitOp.hpp:
+
+../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/hal/Gestures.hpp:
+
+../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/events/ClickEvent.hpp:
+
+../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/Event.hpp:
+
+../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/events/DragEvent.hpp:
+
+../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/events/GestureEvent.hpp:
+
+../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/UIEventListener.hpp:
+
+../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/hal/DMA.hpp:
+
+../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/hal/Atomic.hpp:
+
+../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/Unicode.hpp:
+
+../../Middlewares/ST/TouchGFX/touchgfx//framework/include/platform/driver/touch/TouchController.hpp:
+
+../../Middlewares/ST/TouchGFX/touchgfx//framework/include/platform/driver/button/ButtonController.hpp:
+
+../../Middlewares/ST/TouchGFX/touchgfx//framework/include/platform/core/MCUInstrumentation.hpp:
+
+../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/lcd/LCD.hpp:
+
+../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/Font.hpp:
+
+../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/TextProvider.hpp:
 
 gui/include/gui/model/stm32f429i_discovery.h:
 

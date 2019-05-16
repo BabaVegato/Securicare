@@ -24,7 +24,6 @@ public:
      * (ie. made inactive). Teardown functionality can be placed here.
      */
     virtual void deactivate();
-    virtual void updateLEDState(bool);
     virtual void nbVoleursChanged();
     virtual ~Screen1Presenter() {};
 

@@ -55,6 +55,7 @@ build/MINGW32_NT-6.2/generated/gui_generated/src/screenauth_screen/ScreenAuthVie
  ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/widgets/Box.hpp \
  ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/widgets/Button.hpp \
  ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/widgets/AbstractButton.hpp \
+ ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
  generated/images/include/BitmapDatabase.hpp \
  generated/texts/include/texts/TextKeysAndLanguages.hpp \
  ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/Color.hpp
@@ -168,6 +169,8 @@ gui/include/gui/model/ModelListener.hpp:
 ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/widgets/Button.hpp:
 
 ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/widgets/AbstractButton.hpp:
+
+../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:
 
 generated/images/include/BitmapDatabase.hpp:
 

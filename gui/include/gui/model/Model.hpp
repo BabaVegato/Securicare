@@ -38,10 +38,21 @@ public:
      */
     void tick();
     void updateLEDVERTEState(bool);
-    void updateLEDState(bool);
     int getnbVoleurs() const {return nbVoleurs;}
-    int getAvancementCodeAuth() const {return avancementCodeAuth;}
-    void EntreeCode(int);
+    int getAuth() const {return auth;}
+    int getCodeEntre() const {return codeEntre;}
+
+    int getColorBarR() const {return ColorBarR;}
+    int getColorBarG() const {return ColorBarG;}
+    int getColorBarB() const {return ColorBarB;}
+
+    int getAlphaTXT() const {return AlphaTXT;}
+
+    void BonpasBon();
+    void Bleutermediaire();
+    void Restart();
+
+
 protected:
     /**
      * Pointer to the currently active presenter.
@@ -49,10 +60,20 @@ protected:
     ModelListener* modelListener;
 private:
     int nbVoleurs;
+    int AlphaTXT;
     int compteur;
-    bool pret;
-    int avancementCodeAuth;
-    int codeAdmin;
+    int auth;
+    bool codeTape;
+    char codeEntre;
+    char codeEntreTotal [4];
+    char codeAdmin [4];
+    int ColorBarR;
+    int ColorBarG;
+    int ColorBarB;
+    bool ilFautRestart;
+    bool Gagne;
+
+    
 };
 
 #endif /* MODEL_HPP */

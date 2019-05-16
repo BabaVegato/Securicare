@@ -13,7 +13,6 @@ public:
     virtual ~Screen1View() {}
     virtual void setupScreen();
     virtual void tearDownScreen();
-    void updateLEDState(bool);
     void updateTxt(int);
     void updateWildcard(int);
 protected:

@@ -55,7 +55,9 @@ build/MINGW32_NT-6.2/gui/src/screenauth_screen/ScreenAuthView.o: \
  ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/containers/progress_indicators/AbstractProgressIndicator.hpp \
  ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/widgets/Box.hpp \
  ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/widgets/Button.hpp \
- ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/widgets/AbstractButton.hpp
+ ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/widgets/AbstractButton.hpp \
+ ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
+ ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/Color.hpp
 
 gui/include/gui/screenauth_screen/ScreenAuthView.hpp:
 
@@ -168,3 +170,7 @@ gui/include/gui/model/ModelListener.hpp:
 ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/widgets/Button.hpp:
 
 ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/widgets/AbstractButton.hpp:
+
+../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:
+
+../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/Color.hpp:

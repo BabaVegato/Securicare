@@ -12,6 +12,7 @@
 #include <touchgfx/containers/progress_indicators/BoxProgress.hpp>
 #include <touchgfx/widgets/Button.hpp>
 #include <touchgfx/widgets/Image.hpp>
+#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 
 class ScreenAuthViewBase : public touchgfx::View<ScreenAuthPresenter>
 {
@@ -36,6 +37,23 @@ protected:
     touchgfx::BoxProgress boxProgress_Demande_Code;
     touchgfx::Button BTN_Back;
     touchgfx::Image IMG_Button_Back;
+    touchgfx::TextArea TXT_Codes;
+    touchgfx::TextAreaWithOneWildcard TXT_Code_Entre1;
+    touchgfx::TextAreaWithOneWildcard TXT_Code_Entre2;
+    touchgfx::TextAreaWithOneWildcard TXT_Code_Entre3;
+    touchgfx::TextAreaWithOneWildcard TXT_Code_Entre4;
+
+    /*
+     * Wildcard Buffers
+     */
+    static const uint16_t TXT_CODE_ENTRE1_SIZE = 6;
+    touchgfx::Unicode::UnicodeChar TXT_Code_Entre1Buffer[TXT_CODE_ENTRE1_SIZE];
+    static const uint16_t TXT_CODE_ENTRE2_SIZE = 6;
+    touchgfx::Unicode::UnicodeChar TXT_Code_Entre2Buffer[TXT_CODE_ENTRE2_SIZE];
+    static const uint16_t TXT_CODE_ENTRE3_SIZE = 6;
+    touchgfx::Unicode::UnicodeChar TXT_Code_Entre3Buffer[TXT_CODE_ENTRE3_SIZE];
+    static const uint16_t TXT_CODE_ENTRE4_SIZE = 6;
+    touchgfx::Unicode::UnicodeChar TXT_Code_Entre4Buffer[TXT_CODE_ENTRE4_SIZE];
 
 private:
 

@@ -1,7 +1,7 @@
-build/MINGW32_NT-6.2/gui/src/screenauth_screen/ScreenAuthPresenter.o: \
- gui/src/screenauth_screen/ScreenAuthPresenter.cpp \
- gui/include/gui/screenauth_screen/ScreenAuthView.hpp \
- generated/gui_generated/include/gui_generated/screenauth_screen/ScreenAuthViewBase.hpp \
+build/MINGW32_NT-6.2/gui/src/containers/CustomContainer1.o: \
+ gui/src/containers/CustomContainer1.cpp \
+ gui/include/gui/containers/CustomContainer1.hpp \
+ generated/gui_generated/include/gui_generated/containers/CustomContainer1Base.hpp \
  gui/include/gui/common/FrontendApplication.hpp \
  generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp \
  ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/mvp/MVPApplication.hpp \
@@ -41,26 +41,13 @@ build/MINGW32_NT-6.2/gui/src/screenauth_screen/ScreenAuthPresenter.o: \
  ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/mvp/Presenter.hpp \
  ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/mvp/MVPHeap.hpp \
  gui/include/gui/model/Model.hpp \
- gui/include/gui/screenauth_screen/ScreenAuthPresenter.hpp \
- gui/include/gui/model/ModelListener.hpp \
- ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/widgets/TiledImage.hpp \
- ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/widgets/Widget.hpp \
- ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/widgets/Image.hpp \
- ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/widgets/TextArea.hpp \
- ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/FontManager.hpp \
- ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/TypedText.hpp \
- ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/Texts.hpp \
- ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/containers/progress_indicators/BoxProgress.hpp \
- ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/containers/progress_indicators/AbstractDirectionProgress.hpp \
- ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/containers/progress_indicators/AbstractProgressIndicator.hpp \
+ ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/containers/ScrollableContainer.hpp \
  ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/widgets/Box.hpp \
- ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/widgets/Button.hpp \
- ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/widgets/AbstractButton.hpp \
- ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp
+ ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/widgets/Widget.hpp
 
-gui/include/gui/screenauth_screen/ScreenAuthView.hpp:
+gui/include/gui/containers/CustomContainer1.hpp:
 
-generated/gui_generated/include/gui_generated/screenauth_screen/ScreenAuthViewBase.hpp:
+generated/gui_generated/include/gui_generated/containers/CustomContainer1Base.hpp:
 
 gui/include/gui/common/FrontendApplication.hpp:
 
@@ -140,34 +127,8 @@ generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp
 
 gui/include/gui/model/Model.hpp:
 
-gui/include/gui/screenauth_screen/ScreenAuthPresenter.hpp:
-
-gui/include/gui/model/ModelListener.hpp:
-
-../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/widgets/TiledImage.hpp:
-
-../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/widgets/Widget.hpp:
-
-../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/widgets/Image.hpp:
-
-../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/widgets/TextArea.hpp:
-
-../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/FontManager.hpp:
-
-../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/TypedText.hpp:
-
-../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/Texts.hpp:
-
-../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/containers/progress_indicators/BoxProgress.hpp:
-
-../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/containers/progress_indicators/AbstractDirectionProgress.hpp:
-
-../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/containers/progress_indicators/AbstractProgressIndicator.hpp:
+../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/containers/ScrollableContainer.hpp:
 
 ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/widgets/Box.hpp:
 
-../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/widgets/Button.hpp:
-
-../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/widgets/AbstractButton.hpp:
-
-../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:
+../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/widgets/Widget.hpp:

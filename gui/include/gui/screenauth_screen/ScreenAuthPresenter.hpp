@@ -25,6 +25,10 @@ public:
      */
     virtual void deactivate();
     virtual void nbVoleursChanged();
+    virtual void CodeEntreChanged();
+    virtual void authChanged();
+    virtual void ColorBarChanged();
+    virtual void AlphaTXTChanged();
     virtual ~ScreenAuthPresenter() {};
 
 private:

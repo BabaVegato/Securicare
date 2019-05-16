@@ -15,11 +15,6 @@ void Screen1Presenter::deactivate()
 {
 
 }
-
-void Screen1Presenter::updateLEDState(bool state)
-{
-	model->updateLEDState(state);
-}
 void Screen1Presenter::nbVoleursChanged(){
 	view.updateWildcard(model->getnbVoleurs());
 }
