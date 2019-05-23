@@ -12,6 +12,8 @@
 #include <touchgfx/widgets/Image.hpp>
 #include <touchgfx/containers/SwipeContainer.hpp>
 #include <touchgfx/containers/Container.hpp>
+#include <touchgfx/widgets/ToggleButton.hpp>
+#include <touchgfx/widgets/TextArea.hpp>
 
 class ScreenAlarmeViewBase : public touchgfx::View<ScreenAlarmePresenter>
 {
@@ -34,12 +36,16 @@ protected:
     touchgfx::Image IMG_Back;
     touchgfx::SwipeContainer swipeContainer_Capteurs;
     touchgfx::Container Capteur3;
-
+    touchgfx::ToggleButton toggleButton3;
+    touchgfx::TextArea TXTCapteur3;
 
     touchgfx::Container Capteur2;
-
+    touchgfx::ToggleButton toggleButton2;
+    touchgfx::TextArea TXTCapteur2;
 
     touchgfx::Container Capteur1;
+    touchgfx::ToggleButton toggleButtonCapteur1;
+    touchgfx::TextArea TXTCapteur1;
 
 
 private:

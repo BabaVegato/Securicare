@@ -3,6 +3,8 @@
 /*********************************************************************************/
 #include <gui_generated/screenalarme_screen/ScreenAlarmeViewBase.hpp>
 #include "BitmapDatabase.hpp"
+#include <texts/TextKeysAndLanguages.hpp>
+#include <touchgfx/Color.hpp>
 
 ScreenAlarmeViewBase::ScreenAlarmeViewBase() :
     buttonCallback(this, &ScreenAlarmeViewBase::buttonCallbackHandler)
@@ -18,28 +20,52 @@ ScreenAlarmeViewBase::ScreenAlarmeViewBase() :
     IMG_Back.setXY(17, 261);
     IMG_Back.setBitmap(Bitmap(BITMAP_DARK_ICONS_BACK_ARROW_48_ID));
 
-    swipeContainer_Capteurs.setXY(0, 105);
+    swipeContainer_Capteurs.setXY(0, 86);
 
-    Capteur3.setPosition(0, 0, 241, 128);
+    Capteur3.setPosition(0, 0, 241, 148);
 
+    toggleButton3.setXY(113, 110);
+    toggleButton3.setBitmaps(Bitmap(BITMAP_BLUE_TOGGLEBARS_TOGGLE_ROUND_LARGE_BUTTON_OFF_ID), Bitmap(BITMAP_BLUE_TOGGLEBARS_TOGGLE_ROUND_LARGE_BUTTON_ON_ID));
+    Capteur3.add(toggleButton3);
 
+    TXTCapteur3.setXY(50, 41);
+    TXTCapteur3.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    TXTCapteur3.setLinespacing(0);
+    TXTCapteur3.setTypedText(TypedText(T_SINGLEUSEID18));
+    Capteur3.add(TXTCapteur3);
     swipeContainer_Capteurs.add(Capteur3);
 
-    Capteur2.setPosition(0, 0, 241, 128);
+    Capteur2.setPosition(0, 0, 241, 148);
 
+    toggleButton2.setXY(113, 110);
+    toggleButton2.setBitmaps(Bitmap(BITMAP_BLUE_TOGGLEBARS_TOGGLE_ROUND_LARGE_BUTTON_OFF_ID), Bitmap(BITMAP_BLUE_TOGGLEBARS_TOGGLE_ROUND_LARGE_BUTTON_ON_ID));
+    Capteur2.add(toggleButton2);
 
+    TXTCapteur2.setXY(50, 41);
+    TXTCapteur2.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    TXTCapteur2.setLinespacing(0);
+    TXTCapteur2.setTypedText(TypedText(T_SINGLEUSEID17));
+    Capteur2.add(TXTCapteur2);
     swipeContainer_Capteurs.add(Capteur2);
 
-    Capteur1.setPosition(0, 0, 241, 128);
+    Capteur1.setPosition(0, 0, 241, 148);
 
+    toggleButtonCapteur1.setXY(111, 110);
+    toggleButtonCapteur1.setBitmaps(Bitmap(BITMAP_BLUE_TOGGLEBARS_TOGGLE_ROUND_LARGE_BUTTON_OFF_ID), Bitmap(BITMAP_BLUE_TOGGLEBARS_TOGGLE_ROUND_LARGE_BUTTON_ON_ID));
+    Capteur1.add(toggleButtonCapteur1);
 
+    TXTCapteur1.setXY(50, 41);
+    TXTCapteur1.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    TXTCapteur1.setLinespacing(0);
+    TXTCapteur1.setTypedText(TypedText(T_SINGLEUSEID16));
+    Capteur1.add(TXTCapteur1);
     swipeContainer_Capteurs.add(Capteur1);
 
     swipeContainer_Capteurs.setPageIndicatorBitmaps(Bitmap(BITMAP_DARK_PAGEINDICATOR_DOT_INDICATOR_SMALL_NORMAL_ID), Bitmap(BITMAP_DARK_PAGEINDICATOR_DOT_INDICATOR_SMALL_HIGHLIGHT_ID));
     swipeContainer_Capteurs.setPageIndicatorXY(0, 0);
     swipeContainer_Capteurs.setSwipeCutoff(50);
     swipeContainer_Capteurs.setEndSwipeElasticWidth(50);
-    swipeContainer_Capteurs.setSelectedPage(0);
+    swipeContainer_Capteurs.setSelectedPage(2);
 
     add(TILEDIMG_Background_Alarme);
     add(BUTTON_retour_Screen1);
@@ -60,5 +86,17 @@ void ScreenAlarmeViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&
         //When BUTTON_retour_Screen1 clicked change screen to Screen1
         //Go to Screen1 with screen transition towards West
         application().gotoScreen1ScreenCoverTransitionWest();
+    }
+    else if (&src == &toggleButton3)
+    {
+
+    }
+    else if (&src == &toggleButton2)
+    {
+
+    }
+    else if (&src == &toggleButtonCapteur1)
+    {
+
     }
 }

@@ -1,1 +1,7 @@
 Converting images
+Compiling gui/src/screenauth_screen/ScreenAuthView.cpp
+Compiling gui/src/screenauth_screen/ScreenAuthPresenter.cpp
+Compiling gui/src/model/Model.cpp
+Compiling generated/gui_generated/src/common/FrontendApplicationBase.cpp
+Compiling simulator/main.cpp
+Linking build/bin/simulator.exe

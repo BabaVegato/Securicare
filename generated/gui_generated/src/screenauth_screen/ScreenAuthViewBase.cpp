@@ -7,22 +7,23 @@
 #include <touchgfx/Color.hpp>
 
 ScreenAuthViewBase::ScreenAuthViewBase() :
-    buttonCallback(this, &ScreenAuthViewBase::buttonCallbackHandler)
+    buttonCallback(this, &ScreenAuthViewBase::buttonCallbackHandler),
+    flexButtonCallback(this, &ScreenAuthViewBase::flexButtonCallbackHandler)
 {
     tiledImage1.setBitmap(Bitmap(BITMAP_BLUE_TEXTURES_TWEED_ID));
     tiledImage1.setPosition(0, 0, 240, 320);
     tiledImage1.setOffset(0, 0);
 
     TiledIMG_Demande_Code.setBitmap(Bitmap(BITMAP_BLUE_TEXTURES_CARBON_FIBRE_ID));
-    TiledIMG_Demande_Code.setPosition(19, 8, 202, 107);
+    TiledIMG_Demande_Code.setPosition(9, -2, 223, 107);
     TiledIMG_Demande_Code.setOffset(0, 0);
 
-    TXT_Demande_Code.setXY(33, 15);
+    TXT_Demande_Code.setXY(33, 12);
     TXT_Demande_Code.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 254, 254));
     TXT_Demande_Code.setLinespacing(0);
     TXT_Demande_Code.setTypedText(TypedText(T_SINGLEUSEID1));
 
-    boxProgress_Demande_Code.setXY(28, 88);
+    boxProgress_Demande_Code.setXY(30, 77);
     boxProgress_Demande_Code.setProgressIndicatorPosition(2, 2, 180, 16);
     boxProgress_Demande_Code.setRange(0, 4);
     boxProgress_Demande_Code.setDirection(AbstractDirectionProgress::RIGHT);
@@ -30,20 +31,21 @@ ScreenAuthViewBase::ScreenAuthViewBase() :
     boxProgress_Demande_Code.setColor(touchgfx::Color::getColorFrom24BitRGB(6, 86, 141));
     boxProgress_Demande_Code.setValue(0);
 
-    BTN_Back.setXY(171, 252);
-    BTN_Back.setBitmaps(Bitmap(BITMAP_DARK_BUTTONS_ROUND_ICON_BUTTON_ID), Bitmap(BITMAP_DARK_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID));
+    BTN_Back.setXY(187, -6);
+    BTN_Back.setBitmaps(Bitmap(BITMAP_DARK_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), Bitmap(BITMAP_DARK_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID));
     BTN_Back.setAction(buttonCallback);
+    BTN_Back.setAlpha(0);
 
-    IMG_Button_Back.setXY(190, 258);
+    IMG_Button_Back.setXY(201, -2);
     IMG_Button_Back.setBitmap(Bitmap(BITMAP_DARK_ICONS_NEXT_ARROW_48_ID));
 
-    TXT_Codes.setXY(36, 147);
+    TXT_Codes.setXY(33, 147);
     TXT_Codes.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
     TXT_Codes.setLinespacing(0);
     TXT_Codes.setAlpha(0);
     TXT_Codes.setTypedText(TypedText(T_SINGLEUSEID7));
 
-    TXT_Code_Entre1.setXY(51, 115);
+    TXT_Code_Entre1.setXY(40, 103);
     TXT_Code_Entre1.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
     TXT_Code_Entre1.setLinespacing(0);
     Unicode::snprintf(TXT_Code_Entre1Buffer, TXT_CODE_ENTRE1_SIZE, "%s", TypedText(T_SINGLEUSEID9).getText());
@@ -51,7 +53,7 @@ ScreenAuthViewBase::ScreenAuthViewBase() :
     TXT_Code_Entre1.resizeToCurrentText();
     TXT_Code_Entre1.setTypedText(TypedText(T_SINGLEUSEID8));
 
-    TXT_Code_Entre2.setXY(90, 115);
+    TXT_Code_Entre2.setXY(90, 103);
     TXT_Code_Entre2.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
     TXT_Code_Entre2.setLinespacing(0);
     Unicode::snprintf(TXT_Code_Entre2Buffer, TXT_CODE_ENTRE2_SIZE, "%s", TypedText(T_SINGLEUSEID11).getText());
@@ -59,7 +61,7 @@ ScreenAuthViewBase::ScreenAuthViewBase() :
     TXT_Code_Entre2.resizeToCurrentText();
     TXT_Code_Entre2.setTypedText(TypedText(T_SINGLEUSEID10));
 
-    TXT_Code_Entre3.setXY(130, 115);
+    TXT_Code_Entre3.setXY(137, 103);
     TXT_Code_Entre3.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
     TXT_Code_Entre3.setLinespacing(0);
     Unicode::snprintf(TXT_Code_Entre3Buffer, TXT_CODE_ENTRE3_SIZE, "%s", TypedText(T_SINGLEUSEID13).getText());
@@ -67,13 +69,189 @@ ScreenAuthViewBase::ScreenAuthViewBase() :
     TXT_Code_Entre3.resizeToCurrentText();
     TXT_Code_Entre3.setTypedText(TypedText(T_SINGLEUSEID12));
 
-    TXT_Code_Entre4.setXY(169, 115);
+    TXT_Code_Entre4.setXY(185, 103);
     TXT_Code_Entre4.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
     TXT_Code_Entre4.setLinespacing(0);
     Unicode::snprintf(TXT_Code_Entre4Buffer, TXT_CODE_ENTRE4_SIZE, "%s", TypedText(T_SINGLEUSEID15).getText());
     TXT_Code_Entre4.setWildcard(TXT_Code_Entre4Buffer);
     TXT_Code_Entre4.resizeToCurrentText();
     TXT_Code_Entre4.setTypedText(TypedText(T_SINGLEUSEID14));
+
+    flexButton1_0.setBoxWithBorderPosition(0, 0, 35, 35);
+    flexButton1_0.setBorderSize(0);
+    flexButton1_0.setBoxWithBorderColors(touchgfx::Color::getColorFrom24BitRGB(0, 102, 153), touchgfx::Color::getColorFrom24BitRGB(0, 153, 204), touchgfx::Color::getColorFrom24BitRGB(0, 51, 102), touchgfx::Color::getColorFrom24BitRGB(51, 102, 153));
+    flexButton1_0.setPosition(79, 285, 35, 35);
+    flexButton1_0.setAction(flexButtonCallback);
+
+    flexButton1_1.setBoxWithBorderPosition(0, 0, 35, 35);
+    flexButton1_1.setBorderSize(0);
+    flexButton1_1.setBoxWithBorderColors(touchgfx::Color::getColorFrom24BitRGB(0, 102, 153), touchgfx::Color::getColorFrom24BitRGB(0, 153, 204), touchgfx::Color::getColorFrom24BitRGB(0, 51, 102), touchgfx::Color::getColorFrom24BitRGB(51, 102, 153));
+    flexButton1_1.setPosition(27, 135, 35, 35);
+    flexButton1_1.setAction(flexButtonCallback);
+
+    flexButton1_2.setBoxWithBorderPosition(0, 0, 35, 35);
+    flexButton1_2.setBorderSize(0);
+    flexButton1_2.setBoxWithBorderColors(touchgfx::Color::getColorFrom24BitRGB(0, 102, 153), touchgfx::Color::getColorFrom24BitRGB(0, 153, 204), touchgfx::Color::getColorFrom24BitRGB(0, 51, 102), touchgfx::Color::getColorFrom24BitRGB(51, 102, 153));
+    flexButton1_2.setPosition(79, 135, 35, 35);
+    flexButton1_2.setAction(flexButtonCallback);
+
+    flexButton1_3.setBoxWithBorderPosition(0, 0, 35, 35);
+    flexButton1_3.setBorderSize(0);
+    flexButton1_3.setBoxWithBorderColors(touchgfx::Color::getColorFrom24BitRGB(0, 102, 153), touchgfx::Color::getColorFrom24BitRGB(0, 153, 204), touchgfx::Color::getColorFrom24BitRGB(0, 51, 102), touchgfx::Color::getColorFrom24BitRGB(51, 102, 153));
+    flexButton1_3.setPosition(130, 135, 35, 35);
+    flexButton1_3.setAction(flexButtonCallback);
+
+    flexButton1_4.setBoxWithBorderPosition(0, 0, 35, 35);
+    flexButton1_4.setBorderSize(0);
+    flexButton1_4.setBoxWithBorderColors(touchgfx::Color::getColorFrom24BitRGB(0, 102, 153), touchgfx::Color::getColorFrom24BitRGB(0, 153, 204), touchgfx::Color::getColorFrom24BitRGB(0, 51, 102), touchgfx::Color::getColorFrom24BitRGB(51, 102, 153));
+    flexButton1_4.setPosition(27, 185, 35, 35);
+    flexButton1_4.setAction(flexButtonCallback);
+
+    flexButton1_5.setBoxWithBorderPosition(0, 0, 35, 35);
+    flexButton1_5.setBorderSize(0);
+    flexButton1_5.setBoxWithBorderColors(touchgfx::Color::getColorFrom24BitRGB(0, 102, 153), touchgfx::Color::getColorFrom24BitRGB(0, 153, 204), touchgfx::Color::getColorFrom24BitRGB(0, 51, 102), touchgfx::Color::getColorFrom24BitRGB(51, 102, 153));
+    flexButton1_5.setPosition(79, 184, 35, 35);
+    flexButton1_5.setAction(flexButtonCallback);
+
+    flexButton1_6.setBoxWithBorderPosition(0, 0, 35, 35);
+    flexButton1_6.setBorderSize(0);
+    flexButton1_6.setBoxWithBorderColors(touchgfx::Color::getColorFrom24BitRGB(0, 102, 153), touchgfx::Color::getColorFrom24BitRGB(0, 153, 204), touchgfx::Color::getColorFrom24BitRGB(0, 51, 102), touchgfx::Color::getColorFrom24BitRGB(51, 102, 153));
+    flexButton1_6.setPosition(130, 185, 35, 35);
+    flexButton1_6.setAction(flexButtonCallback);
+
+    flexButton1_7.setBoxWithBorderPosition(0, 0, 35, 35);
+    flexButton1_7.setBorderSize(0);
+    flexButton1_7.setBoxWithBorderColors(touchgfx::Color::getColorFrom24BitRGB(0, 102, 153), touchgfx::Color::getColorFrom24BitRGB(0, 153, 204), touchgfx::Color::getColorFrom24BitRGB(0, 51, 102), touchgfx::Color::getColorFrom24BitRGB(51, 102, 153));
+    flexButton1_7.setPosition(27, 235, 35, 35);
+    flexButton1_7.setAction(flexButtonCallback);
+
+    flexButton1_8.setBoxWithBorderPosition(0, 0, 35, 35);
+    flexButton1_8.setBorderSize(0);
+    flexButton1_8.setBoxWithBorderColors(touchgfx::Color::getColorFrom24BitRGB(0, 102, 153), touchgfx::Color::getColorFrom24BitRGB(0, 153, 204), touchgfx::Color::getColorFrom24BitRGB(0, 51, 102), touchgfx::Color::getColorFrom24BitRGB(51, 102, 153));
+    flexButton1_8.setPosition(79, 235, 35, 35);
+    flexButton1_8.setAction(flexButtonCallback);
+
+    flexButton1_9.setBoxWithBorderPosition(0, 0, 35, 35);
+    flexButton1_9.setBorderSize(0);
+    flexButton1_9.setBoxWithBorderColors(touchgfx::Color::getColorFrom24BitRGB(0, 102, 153), touchgfx::Color::getColorFrom24BitRGB(0, 153, 204), touchgfx::Color::getColorFrom24BitRGB(0, 51, 102), touchgfx::Color::getColorFrom24BitRGB(51, 102, 153));
+    flexButton1_9.setPosition(130, 235, 35, 35);
+    flexButton1_9.setAction(flexButtonCallback);
+
+    flexButton1_A.setBoxWithBorderPosition(0, 0, 35, 34);
+    flexButton1_A.setBorderSize(0);
+    flexButton1_A.setBoxWithBorderColors(touchgfx::Color::getColorFrom24BitRGB(0, 102, 153), touchgfx::Color::getColorFrom24BitRGB(0, 153, 204), touchgfx::Color::getColorFrom24BitRGB(0, 51, 102), touchgfx::Color::getColorFrom24BitRGB(51, 102, 153));
+    flexButton1_A.setPosition(27, 285, 35, 34);
+    flexButton1_A.setAction(flexButtonCallback);
+
+    flexButton1_B.setBoxWithBorderPosition(0, 0, 35, 35);
+    flexButton1_B.setBorderSize(0);
+    flexButton1_B.setBoxWithBorderColors(touchgfx::Color::getColorFrom24BitRGB(0, 102, 153), touchgfx::Color::getColorFrom24BitRGB(0, 153, 204), touchgfx::Color::getColorFrom24BitRGB(0, 51, 102), touchgfx::Color::getColorFrom24BitRGB(51, 102, 153));
+    flexButton1_B.setPosition(130, 285, 35, 35);
+    flexButton1_B.setAction(flexButtonCallback);
+
+    flexButton1_C.setBoxWithBorderPosition(0, 0, 35, 35);
+    flexButton1_C.setBorderSize(0);
+    flexButton1_C.setBoxWithBorderColors(touchgfx::Color::getColorFrom24BitRGB(0, 102, 153), touchgfx::Color::getColorFrom24BitRGB(0, 153, 204), touchgfx::Color::getColorFrom24BitRGB(0, 51, 102), touchgfx::Color::getColorFrom24BitRGB(51, 102, 153));
+    flexButton1_C.setPosition(178, 285, 35, 35);
+    flexButton1_C.setAction(flexButtonCallback);
+
+    flexButton1_D.setBoxWithBorderPosition(0, 0, 35, 35);
+    flexButton1_D.setBorderSize(0);
+    flexButton1_D.setBoxWithBorderColors(touchgfx::Color::getColorFrom24BitRGB(0, 102, 153), touchgfx::Color::getColorFrom24BitRGB(0, 153, 204), touchgfx::Color::getColorFrom24BitRGB(0, 51, 102), touchgfx::Color::getColorFrom24BitRGB(51, 102, 153));
+    flexButton1_D.setPosition(178, 235, 35, 35);
+    flexButton1_D.setAction(flexButtonCallback);
+
+    flexButton1_E.setBoxWithBorderPosition(0, 0, 35, 35);
+    flexButton1_E.setBorderSize(0);
+    flexButton1_E.setBoxWithBorderColors(touchgfx::Color::getColorFrom24BitRGB(0, 102, 153), touchgfx::Color::getColorFrom24BitRGB(0, 153, 204), touchgfx::Color::getColorFrom24BitRGB(0, 51, 102), touchgfx::Color::getColorFrom24BitRGB(51, 102, 153));
+    flexButton1_E.setPosition(178, 185, 35, 35);
+    flexButton1_E.setAction(flexButtonCallback);
+
+    flexButton1_F.setBoxWithBorderPosition(0, 0, 35, 35);
+    flexButton1_F.setBorderSize(0);
+    flexButton1_F.setBoxWithBorderColors(touchgfx::Color::getColorFrom24BitRGB(0, 102, 153), touchgfx::Color::getColorFrom24BitRGB(0, 153, 204), touchgfx::Color::getColorFrom24BitRGB(0, 51, 102), touchgfx::Color::getColorFrom24BitRGB(51, 102, 153));
+    flexButton1_F.setPosition(178, 135, 35, 35);
+    flexButton1_F.setAction(flexButtonCallback);
+
+    textArea1.setXY(37, 139);
+    textArea1.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 0, 0));
+    textArea1.setLinespacing(0);
+    textArea1.setTypedText(TypedText(T_SINGLEUSEID19));
+
+    textArea1_1.setXY(89, 139);
+    textArea1_1.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 0, 0));
+    textArea1_1.setLinespacing(0);
+    textArea1_1.setTypedText(TypedText(T_SINGLEUSEID20));
+
+    textArea1_2.setXY(140, 139);
+    textArea1_2.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 0, 0));
+    textArea1_2.setLinespacing(0);
+    textArea1_2.setTypedText(TypedText(T_SINGLEUSEID21));
+
+    textArea1_3.setXY(37, 188);
+    textArea1_3.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 0, 0));
+    textArea1_3.setLinespacing(0);
+    textArea1_3.setTypedText(TypedText(T_SINGLEUSEID22));
+
+    textArea1_4.setXY(90, 186);
+    textArea1_4.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 0, 0));
+    textArea1_4.setLinespacing(0);
+    textArea1_4.setTypedText(TypedText(T_SINGLEUSEID23));
+
+    textArea1_5.setXY(37, 238);
+    textArea1_5.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 0, 0));
+    textArea1_5.setLinespacing(0);
+    textArea1_5.setTypedText(TypedText(T_SINGLEUSEID24));
+
+    textArea1_6.setXY(90, 238);
+    textArea1_6.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 0, 0));
+    textArea1_6.setLinespacing(0);
+    textArea1_6.setTypedText(TypedText(T_SINGLEUSEID25));
+
+    textArea1_7.setXY(140, 187);
+    textArea1_7.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 0, 0));
+    textArea1_7.setLinespacing(0);
+    textArea1_7.setTypedText(TypedText(T_SINGLEUSEID26));
+
+    textArea1_8.setXY(189, 188);
+    textArea1_8.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 0, 0));
+    textArea1_8.setLinespacing(0);
+    textArea1_8.setTypedText(TypedText(T_SINGLEUSEID27));
+
+    textArea1_9.setXY(189, 139);
+    textArea1_9.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 0, 0));
+    textArea1_9.setLinespacing(0);
+    textArea1_9.setTypedText(TypedText(T_SINGLEUSEID28));
+
+    textArea1_10.setXY(141, 237);
+    textArea1_10.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 0, 0));
+    textArea1_10.setLinespacing(0);
+    textArea1_10.setTypedText(TypedText(T_SINGLEUSEID29));
+
+    textArea1_11.setXY(187, 238);
+    textArea1_11.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 0, 0));
+    textArea1_11.setLinespacing(0);
+    textArea1_11.setTypedText(TypedText(T_SINGLEUSEID30));
+
+    textArea1_12.setXY(35, 286);
+    textArea1_12.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 0, 0));
+    textArea1_12.setLinespacing(0);
+    textArea1_12.setTypedText(TypedText(T_SINGLEUSEID31));
+
+    textArea1_13.setXY(187, 287);
+    textArea1_13.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 0, 0));
+    textArea1_13.setLinespacing(0);
+    textArea1_13.setTypedText(TypedText(T_SINGLEUSEID32));
+
+    textArea1_14.setXY(141, 288);
+    textArea1_14.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 0, 0));
+    textArea1_14.setLinespacing(0);
+    textArea1_14.setTypedText(TypedText(T_SINGLEUSEID33));
+
+    textArea1_15.setXY(90, 288);
+    textArea1_15.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 0, 0));
+    textArea1_15.setLinespacing(0);
+    textArea1_15.setTypedText(TypedText(T_SINGLEUSEID34));
 
     add(tiledImage1);
     add(TiledIMG_Demande_Code);
@@ -86,23 +264,43 @@ ScreenAuthViewBase::ScreenAuthViewBase() :
     add(TXT_Code_Entre2);
     add(TXT_Code_Entre3);
     add(TXT_Code_Entre4);
+    add(flexButton1_0);
+    add(flexButton1_1);
+    add(flexButton1_2);
+    add(flexButton1_3);
+    add(flexButton1_4);
+    add(flexButton1_5);
+    add(flexButton1_6);
+    add(flexButton1_7);
+    add(flexButton1_8);
+    add(flexButton1_9);
+    add(flexButton1_A);
+    add(flexButton1_B);
+    add(flexButton1_C);
+    add(flexButton1_D);
+    add(flexButton1_E);
+    add(flexButton1_F);
+    add(textArea1);
+    add(textArea1_1);
+    add(textArea1_2);
+    add(textArea1_3);
+    add(textArea1_4);
+    add(textArea1_5);
+    add(textArea1_6);
+    add(textArea1_7);
+    add(textArea1_8);
+    add(textArea1_9);
+    add(textArea1_10);
+    add(textArea1_11);
+    add(textArea1_12);
+    add(textArea1_13);
+    add(textArea1_14);
+    add(textArea1_15);
 }
 
 void ScreenAuthViewBase::setupScreen()
 {
 
-}
-
-//Handles when a key is pressed
-void ScreenAuthViewBase::handleKeyEvent(uint8_t key)
-{
-    if(0 == key)
-    {
-        //Interaction1
-        //When hardware button 0 clicked set value boxProgress_Demande_Code
-        //Set value boxProgress_Demande_Code
-        boxProgress_Demande_Code.setValue(1);
-    }
 }
 
 void ScreenAuthViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
@@ -113,5 +311,121 @@ void ScreenAuthViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& s
         //When BTN_Back clicked change screen to Screen1
         //Go to Screen1 with screen transition towards East
         application().gotoScreen1ScreenCoverTransitionEast();
+    }
+}
+
+void ScreenAuthViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src)
+{
+    if (&src == &flexButton1_0)
+    {
+        //Inter0BTN
+        //When flexButton1_0 clicked call virtual function
+        //Call bouton0appuye
+        bouton0appuye();
+    }
+    else if (&src == &flexButton1_1)
+    {
+        //InterBTN1
+        //When flexButton1_1 clicked call virtual function
+        //Call bouton1appuye
+        bouton1appuye();
+    }
+    else if (&src == &flexButton1_2)
+    {
+        //Inter2BTN
+        //When flexButton1_2 clicked call virtual function
+        //Call bouton2appuye
+        bouton2appuye();
+    }
+    else if (&src == &flexButton1_3)
+    {
+        //Inter3BTN
+        //When flexButton1_3 clicked call virtual function
+        //Call bouton3appuye
+        bouton3appuye();
+    }
+    else if (&src == &flexButton1_4)
+    {
+        //Inter4BTN
+        //When flexButton1_4 clicked call virtual function
+        //Call bouton4appuye
+        bouton4appuye();
+    }
+    else if (&src == &flexButton1_5)
+    {
+        //Inter5BTN
+        //When flexButton1_5 clicked call virtual function
+        //Call bouton5appuye
+        bouton5appuye();
+    }
+    else if (&src == &flexButton1_6)
+    {
+        //Inter6BTN
+        //When flexButton1_6 clicked call virtual function
+        //Call bouton6appuye
+        bouton6appuye();
+    }
+    else if (&src == &flexButton1_7)
+    {
+        //Inter7BTN
+        //When flexButton1_7 clicked call virtual function
+        //Call bouton7appuye
+        bouton7appuye();
+    }
+    else if (&src == &flexButton1_8)
+    {
+        //Inter8BTN
+        //When flexButton1_8 clicked call virtual function
+        //Call bouton8appuye
+        bouton8appuye();
+    }
+    else if (&src == &flexButton1_9)
+    {
+        //bouton9appuye
+        //When flexButton1_9 clicked call virtual function
+        //Call bouton9appuye
+        bouton9appuye();
+    }
+    else if (&src == &flexButton1_A)
+    {
+        //boutonAappuye
+        //When flexButton1_A clicked call virtual function
+        //Call boutonAappuye
+        boutonAappuye();
+    }
+    else if (&src == &flexButton1_B)
+    {
+        //boutonBappuye
+        //When flexButton1_B clicked call virtual function
+        //Call boutonBappuye
+        boutonBappuye();
+    }
+    else if (&src == &flexButton1_C)
+    {
+        //boutonCappuye
+        //When flexButton1_C clicked call virtual function
+        //Call boutonCappuye
+        boutonCappuye();
+    }
+    else if (&src == &flexButton1_D)
+    {
+        //boutonDappuye
+        //When flexButton1_D clicked call virtual function
+        //Call boutonDappuye
+        boutonDappuye();
+    }
+    else if (&src == &flexButton1_E)
+    {
+        //boutonEappuye
+        //When flexButton1_E clicked call virtual function
+        //Call boutonEappuye
+        boutonEappuye();
+    }
+    else if (&src == &flexButton1_F)
+    {
+        //InterFBTN
+        //When flexButton1_F clicked call virtual function
+        //Call boutonFappuye
+        boutonFappuye();
     }
 }

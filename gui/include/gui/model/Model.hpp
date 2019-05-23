@@ -48,9 +48,12 @@ public:
 
     int getAlphaTXT() const {return AlphaTXT;}
 
+    void setBTN(char a) {BTN = a;}
+
     void BonpasBon();
     void Bleutermediaire();
     void Restart();
+
 
 
 protected:
@@ -65,13 +68,15 @@ private:
     int auth;
     bool codeTape;
     char codeEntre;
-    char codeEntreTotal [4];
-    char codeAdmin [4];
+    char codeEntre1, codeEntre2, codeEntre3, codeEntre4;
+    char codeAdmin1, codeAdmin2, codeAdmin3, codeAdmin4;
     int ColorBarR;
     int ColorBarG;
     int ColorBarB;
     bool ilFautRestart;
     bool Gagne;
+    bool Capteur1, Capteur2, Capteur3;
+    char BTN;
 
     
 };

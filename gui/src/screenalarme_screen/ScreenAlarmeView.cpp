@@ -14,3 +14,6 @@ void ScreenAlarmeView::tearDownScreen()
 {
     ScreenAlarmeViewBase::tearDownScreen();
 }
+void ScreenAlarmeView::getCapteur1(){
+	
+}

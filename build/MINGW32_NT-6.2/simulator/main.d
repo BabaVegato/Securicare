@@ -86,6 +86,22 @@ build/MINGW32_NT-6.2/simulator/main.o: simulator/main.cpp \
  ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/containers/progress_indicators/AbstractDirectionProgress.hpp \
  ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/containers/progress_indicators/AbstractProgressIndicator.hpp \
  ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/widgets/Box.hpp \
+ ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/containers/buttons/Buttons.hpp \
+ ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/containers/buttons/ClickButtonTrigger.hpp \
+ ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp \
+ ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/containers/buttons/RepeatButtonTrigger.hpp \
+ ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/containers/buttons/ToggleButtonTrigger.hpp \
+ ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/containers/buttons/TouchButtonTrigger.hpp \
+ ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp \
+ ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/widgets/BoxWithBorder.hpp \
+ ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/containers/buttons/IconButtonStyle.hpp \
+ ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/containers/buttons/ImageButtonStyle.hpp \
+ ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/containers/buttons/AnimatedImageButtonStyle.hpp \
+ ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/widgets/AnimatedImage.hpp \
+ ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/containers/buttons/TextButtonStyle.hpp \
+ ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/containers/buttons/TiledImageButtonStyle.hpp \
+ ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/containers/buttons/WildcardTextButtonStyle.hpp \
+ ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/containers/buttons/TwoWildcardTextButtonStyle.hpp \
  gui/include/gui/screenalarme_screen/ScreenAlarmeView.hpp \
  generated/gui_generated/include/gui_generated/screenalarme_screen/ScreenAlarmeViewBase.hpp \
  gui/include/gui/screenalarme_screen/ScreenAlarmePresenter.hpp \
@@ -270,6 +286,38 @@ gui/include/gui/screenauth_screen/ScreenAuthPresenter.hpp:
 ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/containers/progress_indicators/AbstractProgressIndicator.hpp:
 
 ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/widgets/Box.hpp:
+
+../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/containers/buttons/Buttons.hpp:
+
+../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/containers/buttons/ClickButtonTrigger.hpp:
+
+../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp:
+
+../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/containers/buttons/RepeatButtonTrigger.hpp:
+
+../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/containers/buttons/ToggleButtonTrigger.hpp:
+
+../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/containers/buttons/TouchButtonTrigger.hpp:
+
+../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:
+
+../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/widgets/BoxWithBorder.hpp:
+
+../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/containers/buttons/IconButtonStyle.hpp:
+
+../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/containers/buttons/ImageButtonStyle.hpp:
+
+../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/containers/buttons/AnimatedImageButtonStyle.hpp:
+
+../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/widgets/AnimatedImage.hpp:
+
+../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/containers/buttons/TextButtonStyle.hpp:
+
+../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/containers/buttons/TiledImageButtonStyle.hpp:
+
+../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/containers/buttons/WildcardTextButtonStyle.hpp:
+
+../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/containers/buttons/TwoWildcardTextButtonStyle.hpp:
 
 gui/include/gui/screenalarme_screen/ScreenAlarmeView.hpp:
 

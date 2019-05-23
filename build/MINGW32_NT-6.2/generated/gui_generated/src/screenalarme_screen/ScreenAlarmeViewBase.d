@@ -49,7 +49,14 @@ build/MINGW32_NT-6.2/generated/gui_generated/src/screenalarme_screen/ScreenAlarm
  ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/widgets/AbstractButton.hpp \
  ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/containers/SwipeContainer.hpp \
  ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/containers/ListLayout.hpp \
- generated/images/include/BitmapDatabase.hpp
+ ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/widgets/ToggleButton.hpp \
+ ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/widgets/TextArea.hpp \
+ ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/FontManager.hpp \
+ ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/TypedText.hpp \
+ ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/Texts.hpp \
+ generated/images/include/BitmapDatabase.hpp \
+ generated/texts/include/texts/TextKeysAndLanguages.hpp \
+ ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/Color.hpp
 
 generated/gui_generated/include/gui_generated/screenalarme_screen/ScreenAlarmeViewBase.hpp:
 
@@ -149,4 +156,18 @@ gui/include/gui/model/ModelListener.hpp:
 
 ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/containers/ListLayout.hpp:
 
+../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/widgets/ToggleButton.hpp:
+
+../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/widgets/TextArea.hpp:
+
+../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/FontManager.hpp:
+
+../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/TypedText.hpp:
+
+../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/Texts.hpp:
+
 generated/images/include/BitmapDatabase.hpp:
+
+generated/texts/include/texts/TextKeysAndLanguages.hpp:
+
+../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/Color.hpp:

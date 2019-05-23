@@ -187,12 +187,6 @@
     <Filter Include="Source Files\generated\gui_generated\screenalarme_screen">
       <UniqueIdentifier>A555B3F4-DE6D-44B2-8CA5-539D29439655</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\gui\containers">
-      <UniqueIdentifier>236A4685-C872-41FE-A4E8-687E7578E34D</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\gui\containers">
-      <UniqueIdentifier>043433C3-8014-49AE-B004-E51131A3A988</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\generated\gui_generated\containers">
       <UniqueIdentifier>671BB209-8EC6-4C5C-ADBE-378140EB8DB3</UniqueIdentifier>
     </Filter>
@@ -200,7 +194,7 @@
       <UniqueIdentifier>9E2252E1-411F-4262-9800-6C190CA059CE</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\gui\model\Legacy">
-      <UniqueIdentifier>0CA28E0C-3075-4241-8E61-32FFE8F1E0EF</UniqueIdentifier>
+      <UniqueIdentifier>F2C1C45D-1F8B-471B-B9F3-E9CF7DCB20BA</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -569,12 +563,6 @@
     </ClCompile>
     <ClCompile Include="..\..\generated\gui_generated\src\screenalarme_screen\ScreenAlarmeViewBase.cpp">
       <Filter>Source Files\generated\gui_generated\screenalarme_screen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gui\src\containers\Container_Capteurs.cpp">
-      <Filter>Source Files\gui\containers</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\generated\gui_generated\src\containers\Container_CapteursBase.cpp">
-      <Filter>Source Files\generated\gui_generated\containers</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -1347,12 +1335,6 @@
     </ClInclude>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screenalarme_screen\ScreenAlarmeViewBase.hpp">
       <Filter>Header Files\generated\gui_generated\screenalarme_screen</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\containers\Container_Capteurs.hpp">
-      <Filter>Header Files\gui\containers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\Container_CapteursBase.hpp">
-      <Filter>Header Files\generated\gui_generated\containers</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

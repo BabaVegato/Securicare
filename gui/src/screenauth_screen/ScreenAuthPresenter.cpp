@@ -8,7 +8,6 @@ ScreenAuthPresenter::ScreenAuthPresenter(ScreenAuthView& v)
 
 void ScreenAuthPresenter::activate()
 {
-	//view.updateBar(model->getAvancementCodeAuth());
 }
 
 void ScreenAuthPresenter::deactivate()
@@ -28,4 +27,10 @@ void ScreenAuthPresenter::ColorBarChanged(){
 }
 void ScreenAuthPresenter::AlphaTXTChanged(){
 	view.updateAlphaTXT(model->getAlphaTXT());
+}
+void ScreenAuthPresenter::BTNChanged(){
+	model->setBTN(view.getBTN());
+}
+void ScreenAuthPresenter::BTNXauthview(){
+	view.updateBTN('X');
 }

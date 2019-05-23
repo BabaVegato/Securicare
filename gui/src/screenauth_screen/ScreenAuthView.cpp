@@ -1,7 +1,9 @@
 #include <gui/screenauth_screen/ScreenAuthView.hpp>
 #include <touchgfx/Color.hpp>
+#include <gui/model/Model.hpp>
+#include <gui/screenauth_screen/ScreenAuthPresenter.hpp>
 
-ScreenAuthView::ScreenAuthView()
+ScreenAuthView::ScreenAuthView() : BTN('X')
 {
 
 }
@@ -68,4 +70,12 @@ void ScreenAuthView::updateWildcardCode(char val, int auth)
 void ScreenAuthView::updateColorBar(uint8_t R, uint8_t G, uint8_t B)
 {
   boxProgress_Demande_Code.setColor(Color::getColorFrom24BitRGB(R, G, B));
+}
+void ScreenAuthView::updateBTN(char a)
+{
+  BTN = a;
+}
+char ScreenAuthView::getBTN()
+{
+  return BTN;
 }

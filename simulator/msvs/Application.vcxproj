@@ -28,8 +28,6 @@
     <ClCompile Include="..\..\gui\src\screenalarme_screen\ScreenAlarmePresenter.cpp"/>
     <ClCompile Include="..\..\gui\src\screenalarme_screen\ScreenAlarmeView.cpp"/>
     <ClCompile Include="..\..\generated\gui_generated\src\screenalarme_screen\ScreenAlarmeViewBase.cpp"/>
-    <ClCompile Include="..\..\gui\src\containers\Container_Capteurs.cpp"/>
-    <ClCompile Include="..\..\generated\gui_generated\src\containers\Container_CapteursBase.cpp"/>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\assets\texts\texts.xlsx"/>
@@ -290,8 +288,6 @@
     <ClInclude Include="..\..\gui\include\gui\screenalarme_screen\ScreenAlarmePresenter.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\screenalarme_screen\ScreenAlarmeView.hpp"/>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screenalarme_screen\ScreenAlarmeViewBase.hpp"/>
-    <ClInclude Include="..\..\gui\include\gui\containers\Container_Capteurs.hpp"/>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\Container_CapteursBase.hpp"/>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="..\touchgfx.rc"/>

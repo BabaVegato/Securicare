@@ -29,6 +29,8 @@ public:
     virtual void authChanged();
     virtual void ColorBarChanged();
     virtual void AlphaTXTChanged();
+    virtual void BTNChanged();
+    virtual void BTNXauthview();
     virtual ~ScreenAuthPresenter() {};
 
 private:

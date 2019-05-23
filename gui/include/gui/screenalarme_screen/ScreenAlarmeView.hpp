@@ -11,6 +11,7 @@ public:
     virtual ~ScreenAlarmeView() {}
     virtual void setupScreen();
     virtual void tearDownScreen();
+    virtual void getCapteur1();
 protected:
 };
 

@@ -13,6 +13,7 @@
 #include <touchgfx/widgets/Button.hpp>
 #include <touchgfx/widgets/Image.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
+#include <touchgfx/containers/buttons/Buttons.hpp>
 
 class ScreenAuthViewBase : public touchgfx::View<ScreenAuthPresenter>
 {
@@ -21,7 +22,89 @@ public:
     virtual ~ScreenAuthViewBase() {}
 
     virtual void setupScreen();
-    virtual void handleKeyEvent(uint8_t key);
+
+    /*
+     * Custom Action Handlers
+     */
+    virtual void bouton1appuye()
+    {
+        // Override and implement this function in ScreenAuthView
+    }
+
+    virtual void bouton2appuye()
+    {
+        // Override and implement this function in ScreenAuthView
+    }
+
+    virtual void bouton3appuye()
+    {
+        // Override and implement this function in ScreenAuthView
+    }
+
+    virtual void bouton4appuye()
+    {
+        // Override and implement this function in ScreenAuthView
+    }
+
+    virtual void bouton5appuye()
+    {
+        // Override and implement this function in ScreenAuthView
+    }
+
+    virtual void bouton6appuye()
+    {
+        // Override and implement this function in ScreenAuthView
+    }
+
+    virtual void bouton7appuye()
+    {
+        // Override and implement this function in ScreenAuthView
+    }
+
+    virtual void bouton8appuye()
+    {
+        // Override and implement this function in ScreenAuthView
+    }
+
+    virtual void bouton9appuye()
+    {
+        // Override and implement this function in ScreenAuthView
+    }
+
+    virtual void boutonAappuye()
+    {
+        // Override and implement this function in ScreenAuthView
+    }
+
+    virtual void boutonBappuye()
+    {
+        // Override and implement this function in ScreenAuthView
+    }
+
+    virtual void boutonCappuye()
+    {
+        // Override and implement this function in ScreenAuthView
+    }
+
+    virtual void boutonDappuye()
+    {
+        // Override and implement this function in ScreenAuthView
+    }
+
+    virtual void boutonEappuye()
+    {
+        // Override and implement this function in ScreenAuthView
+    }
+
+    virtual void boutonFappuye()
+    {
+        // Override and implement this function in ScreenAuthView
+    }
+
+    virtual void bouton0appuye()
+    {
+        // Override and implement this function in ScreenAuthView
+    }
 
 protected:
     FrontendApplication& application() {
@@ -42,6 +125,38 @@ protected:
     touchgfx::TextAreaWithOneWildcard TXT_Code_Entre2;
     touchgfx::TextAreaWithOneWildcard TXT_Code_Entre3;
     touchgfx::TextAreaWithOneWildcard TXT_Code_Entre4;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > flexButton1_0;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > flexButton1_1;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > flexButton1_2;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > flexButton1_3;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > flexButton1_4;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > flexButton1_5;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > flexButton1_6;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > flexButton1_7;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > flexButton1_8;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > flexButton1_9;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > flexButton1_A;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > flexButton1_B;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > flexButton1_C;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > flexButton1_D;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > flexButton1_E;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > flexButton1_F;
+    touchgfx::TextArea textArea1;
+    touchgfx::TextArea textArea1_1;
+    touchgfx::TextArea textArea1_2;
+    touchgfx::TextArea textArea1_3;
+    touchgfx::TextArea textArea1_4;
+    touchgfx::TextArea textArea1_5;
+    touchgfx::TextArea textArea1_6;
+    touchgfx::TextArea textArea1_7;
+    touchgfx::TextArea textArea1_8;
+    touchgfx::TextArea textArea1_9;
+    touchgfx::TextArea textArea1_10;
+    touchgfx::TextArea textArea1_11;
+    touchgfx::TextArea textArea1_12;
+    touchgfx::TextArea textArea1_13;
+    touchgfx::TextArea textArea1_14;
+    touchgfx::TextArea textArea1_15;
 
     /*
      * Wildcard Buffers
@@ -61,11 +176,13 @@ private:
      * Callback Handler Declarations
      */
     void buttonCallbackHandler(const touchgfx::AbstractButton& src);
+    void flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src);
 
     /*
      * Callback Declarations
      */
     touchgfx::Callback<ScreenAuthViewBase, const touchgfx::AbstractButton&> buttonCallback;
+    touchgfx::Callback<ScreenAuthViewBase, const touchgfx::AbstractButtonContainer&> flexButtonCallback;
 
 };
 
