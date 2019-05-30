@@ -6,7 +6,7 @@
 #include <gui/model/stm32f429i_discovery.h>
 
 
-Model::Model() : modelListener(0), nbVoleurs(0), AlphaTXT(0), compteur(0), auth(0), codeTape(false), codeEntre('X'), codeEntre1('X'), codeEntre2('X'), codeEntre3('X'), codeEntre4('X'), codeAdmin1('A'), codeAdmin2('1'), codeAdmin3('B'), codeAdmin4('2'), ColorBarR(0), ColorBarG(0), ColorBarB(0), ilFautRestart(false), Gagne(false), Capteur1(false), Capteur2(false), Capteur3(false), BTN('X')
+Model::Model() : modelListener(0), nbVoleurs(0), AlphaTXT(0), compteur(0), auth(0), codeTape(false), codeEntre('X'), codeEntre1('X'), codeEntre2('X'), codeEntre3('X'), codeEntre4('X'), codeAdmin1('A'), codeAdmin2('1'), codeAdmin3('B'), codeAdmin4('2'), ColorBarR(0), ColorBarG(0), ColorBarB(0), ilFautRestart(false), Gagne(false), Capteur1(false), Capteur2(false), Capteur3(false), BTN('X'), State(0), Teleco(false)
 {
 	RCC->AHB1ENR |= (1 << 2) | (1 << 6) | (1 << 3);
 	
@@ -17,6 +17,7 @@ Model::Model() : modelListener(0), nbVoleurs(0), AlphaTXT(0), compteur(0), auth(
 	GPIOG->MODER &= ~(0x3 << 18);// PG9 Bit 3
 	GPIOD->MODER &= ~(0x3 << 10); // PD5 Bit 4
 	GPIOD->MODER &= ~(0x3 << 8); // PD4, ToucheTapee
+	GPIOD->MODER &= ~(0x3 << 14); // PD7, Teleco
 
 	//GPIOC->MODER &= ~(0x3 << 11); // PC11, Bit 1
 	//GPIOD->MODER &= ~(0x3 << 14); // PD7, Bit 4
@@ -29,7 +30,6 @@ Model::Model() : modelListener(0), nbVoleurs(0), AlphaTXT(0), compteur(0), auth(
 
 	GPIOG->MODER &= ~(0x3 << 26); //LED VERTE
 	GPIOG->MODER |= (1 << 26);
-
 }
 
 void Model::tick()
@@ -39,26 +39,50 @@ void Model::tick()
 
 compteur++;
 
+if (HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_7) && !Teleco){
+ 	State = 0;
+ 	updateLEDVERTEState(1);
+ 	compteur = 0;
+ 	Teleco = true;
+ 	modelListener->StateChanged();
+}
+
 //IOCODETAPE
-if (HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_4) && compteur>25){
+if(compteur>25){
 	if(ilFautRestart == true){
 		Restart();
 		ilFautRestart = false;
 	}
- 	//updateLEDVERTEState(1);
-	codeTape = true;
 }
-else{
-	//updateLEDVERTEState(0);
+if (HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_4) && compteur>25){
+	codeTape = true;
 }
 
 /////
 modelListener->BTNChanged();
+modelListener->Capteur1Changed();
+modelListener->Capteur2Changed();
+modelListener->Capteur3Changed();
 
-codeTape = false;
+if(!Capteur1 && !Capteur2 && !Capteur3){
+	State = 0; //Tout éteint
+}
+if(Capteur1 && Capteur2 && Capteur3){
+	State = 1; //Tout allumé
+}
+if(!(!Capteur1 && !Capteur2 && !Capteur3) && !(Capteur1 && Capteur2 && Capteur3)){
+	State = 2; //Mixed
+}
+
+modelListener->StateChanged();
+
+//codeTape = false;
 //
 if(BTN != 'X'){
-	updateLEDVERTEState(1);
+	if(ilFautRestart == true){
+		Restart();
+		ilFautRestart = false;
+	}
 	codeTape = true;
 }
 //
@@ -66,13 +90,9 @@ if(compteur>25 && codeTape && !Gagne){
 
 	//IOVoleurs
 	if (HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13)){
-		//updateLEDVERTEState(1);
  		nbVoleurs++;
 		modelListener->nbVoleursChanged();
 	}
-	else{
- 		updateLEDVERTEState(0);
- 	}
  	/////
 
 
@@ -161,6 +181,11 @@ if(compteur>25 && codeTape && !Gagne){
 	codeTape = false;
 }
 
+if(compteur>25 && Gagne){
+	Restart();
+	modelListener->GoToCodes();
+}
+
 
 
 #endif
@@ -169,12 +194,10 @@ if(compteur>25 && codeTape && !Gagne){
 
 void Model::BonpasBon(){
 	if(codeEntre1 == codeAdmin1 && codeEntre2 == codeAdmin2 && codeEntre3 == codeAdmin3 && codeEntre4 == codeAdmin4){
-		if(Gagne==false){
+		if(!Gagne){
 			ColorBarR = 0;
 			ColorBarG = 150;
 			ColorBarB = 0;
-			AlphaTXT = 255;
-			modelListener->AlphaTXTChanged();
 			modelListener->ColorBarChanged();
 			Gagne = true;
 		}
@@ -214,4 +237,6 @@ void Model::Restart(){
 	codeEntre2='X';
 	codeEntre3='X';
 	codeEntre4='X';
+	Gagne = false;
+	compteur = 0;
 }

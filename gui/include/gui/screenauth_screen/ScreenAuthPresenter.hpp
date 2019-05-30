@@ -31,6 +31,7 @@ public:
     virtual void AlphaTXTChanged();
     virtual void BTNChanged();
     virtual void BTNXauthview();
+    virtual void GoToCodes();
     virtual ~ScreenAuthPresenter() {};
 
 private:

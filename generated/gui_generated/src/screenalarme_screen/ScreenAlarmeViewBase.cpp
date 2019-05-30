@@ -24,9 +24,10 @@ ScreenAlarmeViewBase::ScreenAlarmeViewBase() :
 
     Capteur3.setPosition(0, 0, 241, 148);
 
-    toggleButton3.setXY(113, 110);
-    toggleButton3.setBitmaps(Bitmap(BITMAP_BLUE_TOGGLEBARS_TOGGLE_ROUND_LARGE_BUTTON_OFF_ID), Bitmap(BITMAP_BLUE_TOGGLEBARS_TOGGLE_ROUND_LARGE_BUTTON_ON_ID));
-    Capteur3.add(toggleButton3);
+    toggleButtonCapteur3.setXY(113, 110);
+    toggleButtonCapteur3.setBitmaps(Bitmap(BITMAP_BLUE_TOGGLEBARS_TOGGLE_ROUND_LARGE_BUTTON_OFF_ID), Bitmap(BITMAP_BLUE_TOGGLEBARS_TOGGLE_ROUND_LARGE_BUTTON_ON_ID));
+    toggleButtonCapteur3.setAction(buttonCallback);
+    Capteur3.add(toggleButtonCapteur3);
 
     TXTCapteur3.setXY(50, 41);
     TXTCapteur3.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
@@ -37,9 +38,10 @@ ScreenAlarmeViewBase::ScreenAlarmeViewBase() :
 
     Capteur2.setPosition(0, 0, 241, 148);
 
-    toggleButton2.setXY(113, 110);
-    toggleButton2.setBitmaps(Bitmap(BITMAP_BLUE_TOGGLEBARS_TOGGLE_ROUND_LARGE_BUTTON_OFF_ID), Bitmap(BITMAP_BLUE_TOGGLEBARS_TOGGLE_ROUND_LARGE_BUTTON_ON_ID));
-    Capteur2.add(toggleButton2);
+    toggleButtonCapteur2.setXY(113, 110);
+    toggleButtonCapteur2.setBitmaps(Bitmap(BITMAP_BLUE_TOGGLEBARS_TOGGLE_ROUND_LARGE_BUTTON_OFF_ID), Bitmap(BITMAP_BLUE_TOGGLEBARS_TOGGLE_ROUND_LARGE_BUTTON_ON_ID));
+    toggleButtonCapteur2.setAction(buttonCallback);
+    Capteur2.add(toggleButtonCapteur2);
 
     TXTCapteur2.setXY(50, 41);
     TXTCapteur2.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
@@ -52,6 +54,7 @@ ScreenAlarmeViewBase::ScreenAlarmeViewBase() :
 
     toggleButtonCapteur1.setXY(111, 110);
     toggleButtonCapteur1.setBitmaps(Bitmap(BITMAP_BLUE_TOGGLEBARS_TOGGLE_ROUND_LARGE_BUTTON_OFF_ID), Bitmap(BITMAP_BLUE_TOGGLEBARS_TOGGLE_ROUND_LARGE_BUTTON_ON_ID));
+    toggleButtonCapteur1.setAction(buttonCallback);
     Capteur1.add(toggleButtonCapteur1);
 
     TXTCapteur1.setXY(50, 41);
@@ -67,10 +70,27 @@ ScreenAlarmeViewBase::ScreenAlarmeViewBase() :
     swipeContainer_Capteurs.setEndSwipeElasticWidth(50);
     swipeContainer_Capteurs.setSelectedPage(2);
 
+    button1.setXY(0, 0);
+    button1.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID));
+    button1.setAction(buttonCallback);
+    button1.setAlpha(0);
+
+    toggleButtonToutEteindre.setXY(67, 37);
+    toggleButtonToutEteindre.setBitmaps(Bitmap(BITMAP_BLUE_TOGGLEBARS_TOGGLE_SMALL_BUTTON_OFF_ID), Bitmap(BITMAP_BLUE_TOGGLEBARS_TOGGLE_SMALL_BUTTON_ON_ID));
+    toggleButtonToutEteindre.setAction(buttonCallback);
+
+    textArea1.setXY(26, 2);
+    textArea1.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    textArea1.setLinespacing(0);
+    textArea1.setTypedText(TypedText(T_SINGLEUSEID38));
+
     add(TILEDIMG_Background_Alarme);
     add(BUTTON_retour_Screen1);
     add(IMG_Back);
     add(swipeContainer_Capteurs);
+    add(button1);
+    add(toggleButtonToutEteindre);
+    add(textArea1);
 }
 
 void ScreenAlarmeViewBase::setupScreen()
@@ -87,16 +107,39 @@ void ScreenAlarmeViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&
         //Go to Screen1 with screen transition towards West
         application().gotoScreen1ScreenCoverTransitionWest();
     }
-    else if (&src == &toggleButton3)
+    else if (&src == &toggleButtonCapteur3)
     {
-
+        //InterCapteur3
+        //When toggleButtonCapteur3 clicked call virtual function
+        //Call Capteur3BTN
+        Capteur3BTN();
     }
-    else if (&src == &toggleButton2)
+    else if (&src == &toggleButtonCapteur2)
     {
-
+        //InterCapteur2
+        //When toggleButtonCapteur2 clicked call virtual function
+        //Call Capteur2BTN
+        Capteur2BTN();
     }
     else if (&src == &toggleButtonCapteur1)
     {
-
+        //InterCapteur1
+        //When toggleButtonCapteur1 clicked call virtual function
+        //Call Capteur1BTN
+        Capteur1BTN();
+    }
+    else if (&src == &button1)
+    {
+        //GoCodes
+        //When button1 clicked change screen to ScreenCodes
+        //Go to ScreenCodes with screen transition towards East
+        application().gotoScreenCodesScreenSlideTransitionEast();
+    }
+    else if (&src == &toggleButtonToutEteindre)
+    {
+        //InterToutEteindre
+        //When toggleButtonToutEteindre clicked call virtual function
+        //Call ToutEteindre
+        ToutEteindre();
     }
 }

@@ -42,6 +42,8 @@ TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o: \
  c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/Callback.hpp \
  c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/EasingEquations.hpp \
  c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/widgets/Widget.hpp \
+ c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/transitions/SlideTransition.hpp \
+ c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/widgets/SnapshotWidget.hpp \
  TouchGFX/gui/include/gui/common/FrontendApplication.hpp \
  TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp \
  c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/mvp/MVPApplication.hpp \
@@ -91,6 +93,9 @@ TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o: \
  TouchGFX/gui/include/gui/screenalarme_screen/ScreenAlarmePresenter.hpp \
  c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/containers/SwipeContainer.hpp \
  c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/containers/ListLayout.hpp \
+ TouchGFX/gui/include/gui/screencodes_screen/ScreenCodesView.hpp \
+ TouchGFX/generated/gui_generated/include/gui_generated/screencodes_screen/ScreenCodesViewBase.hpp \
+ TouchGFX/gui/include/gui/screencodes_screen/ScreenCodesPresenter.hpp \
  TouchGFX/generated/images/include/BitmapDatabase.hpp \
  c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/hal/BoardConfiguration.hpp \
  c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/hal/GPIO.hpp \
@@ -267,6 +272,10 @@ c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/
 
 c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:
 
+c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/transitions/SlideTransition.hpp:
+
+c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/widgets/SnapshotWidget.hpp:
+
 TouchGFX/gui/include/gui/common/FrontendApplication.hpp:
 
 TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp:
@@ -364,6 +373,12 @@ TouchGFX/gui/include/gui/screenalarme_screen/ScreenAlarmePresenter.hpp:
 c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/containers/SwipeContainer.hpp:
 
 c:/TouchGFXProjects/TestGPIO/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/containers/ListLayout.hpp:
+
+TouchGFX/gui/include/gui/screencodes_screen/ScreenCodesView.hpp:
+
+TouchGFX/generated/gui_generated/include/gui_generated/screencodes_screen/ScreenCodesViewBase.hpp:
+
+TouchGFX/gui/include/gui/screencodes_screen/ScreenCodesPresenter.hpp:
 
 TouchGFX/generated/images/include/BitmapDatabase.hpp:
 

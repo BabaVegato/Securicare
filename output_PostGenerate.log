@@ -39,6 +39,16 @@
   <FilePath>../touchgfx/gui/src/screenauth_screen/screenauthview.cpp</FilePath>
 </File>
 <File>
+  <FileName>ScreenCodesPresenter.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/gui/src/screencodes_screen/screencodespresenter.cpp</FilePath>
+</File>
+<File>
+  <FileName>ScreenCodesView.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/gui/src/screencodes_screen/screencodesview.cpp</FilePath>
+</File>
+<File>
   <FileName>ApplicationFontProvider.cpp</FileName>
   <FileType>8</FileType>
   <FilePath>../touchgfx/generated/fonts/src/applicationfontprovider.cpp</FilePath>
@@ -84,6 +94,11 @@
   <FilePath>../touchgfx/generated/images/src/__designer/blue_textures_tweed.cpp</FilePath>
 </File>
 <File>
+  <FileName>blue_textures_vaio_hard_edge.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/images/src/__designer/blue_textures_vaio_hard_edge.cpp</FilePath>
+</File>
+<File>
   <FileName>blue_togglebars_toggle_round_large_button_off.cpp</FileName>
   <FileType>8</FileType>
   <FilePath>../touchgfx/generated/images/src/__designer/blue_togglebars_toggle_round_large_button_off.cpp</FilePath>
@@ -92,6 +107,16 @@
   <FileName>blue_togglebars_toggle_round_large_button_on.cpp</FileName>
   <FileType>8</FileType>
   <FilePath>../touchgfx/generated/images/src/__designer/blue_togglebars_toggle_round_large_button_on.cpp</FilePath>
+</File>
+<File>
+  <FileName>blue_togglebars_toggle_small_button_off.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/images/src/__designer/blue_togglebars_toggle_small_button_off.cpp</FilePath>
+</File>
+<File>
+  <FileName>blue_togglebars_toggle_small_button_on.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/images/src/__designer/blue_togglebars_toggle_small_button_on.cpp</FilePath>
 </File>
 <File>
   <FileName>dark_buttons_round_edge_icon_button.cpp</FileName>
@@ -154,6 +179,11 @@
   <FilePath>../touchgfx/generated/fonts/src/font_timesbd_27_4bpp.cpp</FilePath>
 </File>
 <File>
+  <FileName>Font_verdanaz_25_4bpp.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/fonts/src/font_verdanaz_25_4bpp.cpp</FilePath>
+</File>
+<File>
   <FileName>FontGetters.cpp</FileName>
   <FileType>8</FileType>
   <FilePath>../touchgfx/generated/fonts/src/fontgetters.cpp</FilePath>
@@ -179,6 +209,11 @@
   <FilePath>../touchgfx/generated/fonts/src/kerning_timesbd_27_4bpp.cpp</FilePath>
 </File>
 <File>
+  <FileName>Kerning_verdanaz_25_4bpp.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/fonts/src/kerning_verdanaz_25_4bpp.cpp</FilePath>
+</File>
+<File>
   <FileName>LanguageGb.cpp</FileName>
   <FileType>8</FileType>
   <FilePath>../touchgfx/generated/texts/src/languagegb.cpp</FilePath>
@@ -199,6 +234,11 @@
   <FilePath>../touchgfx/generated/gui_generated/src/screenauth_screen/screenauthviewbase.cpp</FilePath>
 </File>
 <File>
+  <FileName>ScreenCodesViewBase.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/gui_generated/src/screencodes_screen/screencodesviewbase.cpp</FilePath>
+</File>
+<File>
   <FileName>Table_segoescb_40_4bpp.cpp</FileName>
   <FileType>8</FileType>
   <FilePath>../touchgfx/generated/fonts/src/table_segoescb_40_4bpp.cpp</FilePath>
@@ -212,6 +252,11 @@
   <FileName>Table_timesbd_27_4bpp.cpp</FileName>
   <FileType>8</FileType>
   <FilePath>../touchgfx/generated/fonts/src/table_timesbd_27_4bpp.cpp</FilePath>
+</File>
+<File>
+  <FileName>Table_verdanaz_25_4bpp.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/fonts/src/table_verdanaz_25_4bpp.cpp</FilePath>
 </File>
 <File>
   <FileName>Texts.cpp</FileName>

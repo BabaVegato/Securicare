@@ -11,6 +11,7 @@ using namespace touchgfx;
 extern touchgfx::InternalFlashFont& getFont_timesbd_27_4bpp();
 extern touchgfx::InternalFlashFont& getFont_segoescb_40_4bpp();
 extern touchgfx::InternalFlashFont& getFont_seguisb_30_4bpp();
+extern touchgfx::InternalFlashFont& getFont_verdanaz_25_4bpp();
 
 touchgfx::Font* ApplicationFontProvider::getFont(touchgfx::FontId fontId)
 {
@@ -22,6 +23,8 @@ touchgfx::Font* ApplicationFontProvider::getFont(touchgfx::FontId fontId)
         return &(getFont_segoescb_40_4bpp());
     case Typography::FONT_VOLEURS:
         return &(getFont_seguisb_30_4bpp());
+    case Typography::TYPOGRAPHY_00:
+        return &(getFont_verdanaz_25_4bpp());
     default:
         return 0;
     }

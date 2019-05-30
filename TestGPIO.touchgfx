@@ -68,8 +68,8 @@
             "AutoSize": true,
             "LineSpacing": 0,
             "Name": "TXT_Bonjour",
-            "X": 28,
-            "Y": 16,
+            "X": 25,
+            "Y": 0,
             "Width": 185,
             "Height": 65,
             "Type": "TextArea",
@@ -112,7 +112,7 @@
             },
             "Name": "TXT_Nb_Voleurs",
             "X": 42,
-            "Y": 81,
+            "Y": 62,
             "Width": 150,
             "Height": 108,
             "Type": "TextArea",
@@ -148,6 +148,34 @@
             "Width": 31,
             "Height": 31,
             "Type": "Image",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId36",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 0,
+              "Green": 0,
+              "Blue": 0
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Wildcard1": {
+              "TextId": "SingleUseId37",
+              "UseBuffer": true,
+              "BufferSize": 10
+            },
+            "Name": "TXTStatut",
+            "X": 58,
+            "Y": 203,
+            "Width": 166,
+            "Height": 36,
+            "Type": "TextArea",
             "Visible": true,
             "Draggable": false,
             "Clickable": false,
@@ -1794,7 +1822,7 @@
             }
           },
           {
-            "InteractionName": "boutonFappuye",
+            "InteractionName": "InterFBTN",
             "HasCompletedTrigger": false,
             "Trigger": {
               "TriggerComponent": "flexButton1_F",
@@ -1802,6 +1830,18 @@
             },
             "Action": {
               "FunctionName": "boutonFappuye",
+              "Type": "ActionCustom"
+            }
+          },
+          {
+            "InteractionName": "Inter0BTN",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "flexButton1_0",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "FunctionName": "bouton0appuye",
               "Type": "ActionCustom"
             }
           }
@@ -1870,7 +1910,7 @@
                     "Released": "__designer\\blue_togglebars_toggle_round_large_button_off.png",
                     "Alpha": 255,
                     "Style": "Style4",
-                    "Name": "toggleButton3",
+                    "Name": "toggleButtonCapteur3",
                     "X": 113,
                     "Y": 110,
                     "Width": 128,
@@ -1926,7 +1966,7 @@
                     "Released": "__designer\\blue_togglebars_toggle_round_large_button_off.png",
                     "Alpha": 255,
                     "Style": "Style4",
-                    "Name": "toggleButton2",
+                    "Name": "toggleButtonCapteur2",
                     "X": 113,
                     "Y": 110,
                     "Width": 128,
@@ -2052,6 +2092,64 @@
             "Clickable": false,
             "Fadeable": false,
             "Moveable": false
+          },
+          {
+            "Pressed": "__designer\\blue_buttons_round_edge_icon_button_pressed.png",
+            "Released": "__designer\\blue_buttons_round_edge_icon_button.png",
+            "Alpha": 0,
+            "Style": "Style1",
+            "Name": "button1",
+            "X": 0,
+            "Y": 0,
+            "Width": 60,
+            "Height": 60,
+            "Type": "Button",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "InitialStatePressed": false,
+            "Pressed": "__designer\\blue_togglebars_toggle_small_button_on.png",
+            "Released": "__designer\\blue_togglebars_toggle_small_button_off.png",
+            "Alpha": 255,
+            "Style": "Style6",
+            "Name": "toggleButtonToutEteindre",
+            "X": 67,
+            "Y": 37,
+            "Width": 96,
+            "Height": 38,
+            "Type": "ToggleButton",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId38",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 0,
+              "Green": 0,
+              "Blue": 0
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "textArea1",
+            "X": 26,
+            "Y": 2,
+            "Width": 181,
+            "Height": 31,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
           }
         ],
         "Interactions": [
@@ -2068,9 +2166,165 @@
               "ActionComponent": "Screen1",
               "Type": "ActionGotoScreen"
             }
+          },
+          {
+            "InteractionName": "GoCodes",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "button1",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "East",
+              "ActionComponent": "ScreenCodes",
+              "Type": "ActionGotoScreen"
+            }
+          },
+          {
+            "InteractionName": "InterCapteur1",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "toggleButtonCapteur1",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "FunctionName": "Capteur1BTN",
+              "Type": "ActionCustom"
+            }
+          },
+          {
+            "InteractionName": "InterToutEteindre",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "toggleButtonToutEteindre",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "FunctionName": "ToutEteindre",
+              "Type": "ActionCustom"
+            }
+          },
+          {
+            "InteractionName": "InterCapteur2",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "toggleButtonCapteur2",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "FunctionName": "Capteur2BTN",
+              "Type": "ActionCustom"
+            }
+          },
+          {
+            "InteractionName": "InterCapteur3",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "toggleButtonCapteur3",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "FunctionName": "Capteur3BTN",
+              "Type": "ActionCustom"
+            }
           }
         ],
         "Name": "ScreenAlarme",
+        "OverrideDefaultBufferSize": false,
+        "CanvasBufferSize": 0
+      },
+      {
+        "Components": [
+          {
+            "FileName": "__designer\\blue_textures_vaio_hard_edge.png",
+            "Alpha": 255,
+            "OffsetX": 0,
+            "OffsetY": 0,
+            "Name": "tiledImage1",
+            "X": 0,
+            "Y": 0,
+            "Width": 240,
+            "Height": 320,
+            "Type": "TiledImage",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId35",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 0,
+              "Green": 0,
+              "Blue": 0
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "textArea1",
+            "X": 20,
+            "Y": 40,
+            "Width": 197,
+            "Height": 279,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Pressed": "__designer\\blue_buttons_round_edge_icon_button_pressed.png",
+            "Released": "__designer\\blue_buttons_round_edge_icon_button.png",
+            "Alpha": 0,
+            "Style": "Style1",
+            "Name": "button1",
+            "X": 188,
+            "Y": -5,
+            "Width": 60,
+            "Height": 60,
+            "Type": "Button",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "RelativeFilename": "__designer\\dark_icons_next_arrow_48.png",
+            "Alpha": 255,
+            "Name": "image1",
+            "X": 208,
+            "Y": 0,
+            "Width": 28,
+            "Height": 48,
+            "Type": "Image",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "ReturnToMain",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "button1",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "Screen1",
+              "Type": "ActionGotoScreen"
+            }
+          }
+        ],
+        "Name": "ScreenCodes",
         "OverrideDefaultBufferSize": false,
         "CanvasBufferSize": 0
       }
@@ -2207,6 +2461,22 @@
       },
       {
         "TextEntryId": "SingleUseId34",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId35",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId36",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId37",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId38",
         "IsResource": false
       }
     ],

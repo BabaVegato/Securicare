@@ -34,3 +34,6 @@ void ScreenAuthPresenter::BTNChanged(){
 void ScreenAuthPresenter::BTNXauthview(){
 	view.updateBTN('X');
 }
+void ScreenAuthPresenter::GoToCodes(){
+	static_cast<FrontendApplication*>(Application::getInstance())->gotoScreenCodesScreenSlideTransitionEast();
+}

@@ -25,8 +25,17 @@ public:
     virtual void CodeEntreChanged() {}
     virtual void ColorBarChanged() {}
     virtual void AlphaTXTChanged() {}
+
     virtual void BTNChanged() {}
     virtual void BTNXauthview(){};
+
+    virtual void Capteur1Changed(){};
+    virtual void Capteur2Changed(){};
+    virtual void Capteur3Changed(){};
+
+    virtual void StateChanged(){};
+    
+    virtual void GoToCodes(){};
 
     /**
      * Sets the model pointer to point to the Model object. Called automatically

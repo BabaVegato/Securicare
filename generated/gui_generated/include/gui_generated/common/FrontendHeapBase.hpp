@@ -12,6 +12,8 @@
 #include <touchgfx/transitions/CoverTransition.hpp>
 #include <touchgfx/transitions/CoverTransition.hpp>
 #include <touchgfx/transitions/CoverTransition.hpp>
+#include <touchgfx/transitions/SlideTransition.hpp>
+
 
 #include <gui/common/FrontendApplication.hpp>
 #include <gui/model/Model.hpp>
@@ -22,6 +24,8 @@
 #include <gui/screenauth_screen/ScreenAuthPresenter.hpp>
 #include <gui/screenalarme_screen/ScreenAlarmeView.hpp>
 #include <gui/screenalarme_screen/ScreenAlarmePresenter.hpp>
+#include <gui/screencodes_screen/ScreenCodesView.hpp>
+#include <gui/screencodes_screen/ScreenCodesPresenter.hpp>
 
 
 /**
@@ -47,7 +51,8 @@ public:
     typedef meta::TypeList< Screen1View,
             meta::TypeList< ScreenAuthView,
             meta::TypeList< ScreenAlarmeView,
-            meta::Nil > >
+            meta::TypeList< ScreenCodesView,
+            meta::Nil > > >
             > GeneratedViewTypes;
 
     /**
@@ -62,7 +67,8 @@ public:
     typedef meta::TypeList< Screen1Presenter,
             meta::TypeList< ScreenAuthPresenter,
             meta::TypeList< ScreenAlarmePresenter,
-            meta::Nil > >
+            meta::TypeList< ScreenCodesPresenter,
+            meta::Nil > > >
             > GeneratedPresenterTypes;
 
     /**
@@ -77,7 +83,8 @@ public:
     typedef meta::TypeList< NoTransition,
             meta::TypeList< CoverTransition<WEST>,
             meta::TypeList< CoverTransition<EAST>,
-            meta::Nil > >
+            meta::TypeList< SlideTransition<EAST>,
+            meta::Nil > > >
             > GeneratedTransitionTypes;
 
     /**

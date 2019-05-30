@@ -12,12 +12,14 @@ using namespace touchgfx;
 extern touchgfx::InternalFlashFont& getFont_timesbd_27_4bpp();
 extern touchgfx::InternalFlashFont& getFont_segoescb_40_4bpp();
 extern touchgfx::InternalFlashFont& getFont_seguisb_30_4bpp();
+extern touchgfx::InternalFlashFont& getFont_verdanaz_25_4bpp();
 
 const touchgfx::Font* const _fonts[] =
 {
     &(getFont_timesbd_27_4bpp()),
     &(getFont_segoescb_40_4bpp()),
-    &(getFont_seguisb_30_4bpp())
+    &(getFont_seguisb_30_4bpp()),
+    &(getFont_verdanaz_25_4bpp())
 };
 
 TEXT_LOCATION_FLASH_PRAGMA
@@ -55,7 +57,11 @@ const touchgfx::TypedText::TypedTextData typedText_database_DEFAULT[] TEXT_LOCAT
     { 0, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
     { 0, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
     { 0, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
-    { 0, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR }
+    { 0, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
+    { 3, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
+    { 2, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
+    { 2, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
+    { 3, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR }
 };
 
 

@@ -11,6 +11,7 @@ ScreenAuthView::ScreenAuthView() : BTN('X')
 void ScreenAuthView::setupScreen()
 {
   ScreenAuthViewBase::setupScreen();
+  
 }
 
 void ScreenAuthView::tearDownScreen()

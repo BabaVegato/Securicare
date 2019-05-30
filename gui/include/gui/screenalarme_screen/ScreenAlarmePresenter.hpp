@@ -24,7 +24,9 @@ public:
      * (ie. made inactive). Teardown functionality can be placed here.
      */
     virtual void deactivate();
-
+    virtual void Capteur1Changed();
+    virtual void Capteur2Changed();
+    virtual void Capteur3Changed();
     virtual ~ScreenAlarmePresenter() {};
 
 private:

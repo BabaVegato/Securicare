@@ -30,6 +30,10 @@ public:
     // ScreenAlarme
     void gotoScreenAlarmeScreenCoverTransitionEast();
 
+
+    // ScreenCodes
+    void gotoScreenCodesScreenSlideTransitionEast();
+
 protected:
     touchgfx::Callback<FrontendApplicationBase> transitionCallback;
     FrontendHeap& frontendHeap;
@@ -49,6 +53,10 @@ protected:
 
     // ScreenAlarme
     void gotoScreenAlarmeScreenCoverTransitionEastImpl();
+
+
+    // ScreenCodes
+    void gotoScreenCodesScreenSlideTransitionEastImpl();
 };
 
 #endif // FRONTENDAPPLICATIONBASE_HPP

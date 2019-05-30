@@ -13,6 +13,8 @@
 #include <gui/screenauth_screen/ScreenAuthPresenter.hpp>
 #include <gui/screenalarme_screen/ScreenAlarmeView.hpp>
 #include <gui/screenalarme_screen/ScreenAlarmePresenter.hpp>
+#include <gui/screencodes_screen/ScreenCodesView.hpp>
+#include <gui/screencodes_screen/ScreenCodesPresenter.hpp>
 
 using namespace touchgfx;
 
@@ -90,5 +92,18 @@ void FrontendApplicationBase::gotoScreenAlarmeScreenCoverTransitionEast()
 void FrontendApplicationBase::gotoScreenAlarmeScreenCoverTransitionEastImpl()
 {
     makeTransition<ScreenAlarmeView, ScreenAlarmePresenter, touchgfx::CoverTransition<EAST>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// ScreenCodes
+
+void FrontendApplicationBase::gotoScreenCodesScreenSlideTransitionEast()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotoScreenCodesScreenSlideTransitionEastImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoScreenCodesScreenSlideTransitionEastImpl()
+{
+    makeTransition<ScreenCodesView, ScreenCodesPresenter, touchgfx::SlideTransition<EAST>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }
 

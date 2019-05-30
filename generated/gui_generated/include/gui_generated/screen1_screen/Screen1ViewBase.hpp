@@ -49,12 +49,15 @@ protected:
     touchgfx::FadeAnimator< touchgfx::TextAreaWithOneWildcard > TXT_Nb_Voleurs;
     touchgfx::Button BTN_Go_Screen_Alarmes;
     touchgfx::Image image2;
+    touchgfx::TextAreaWithOneWildcard TXTStatut;
 
     /*
      * Wildcard Buffers
      */
     static const uint16_t TXT_NB_VOLEURS_SIZE = 5;
     touchgfx::Unicode::UnicodeChar TXT_Nb_VoleursBuffer[TXT_NB_VOLEURS_SIZE];
+    static const uint16_t TXTSTATUT_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar TXTStatutBuffer[TXTSTATUT_SIZE];
 
 private:
 

@@ -193,8 +193,20 @@
     <Filter Include="Header Files\generated\gui_generated\containers">
       <UniqueIdentifier>9E2252E1-411F-4262-9800-6C190CA059CE</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\gui\screencodes_screen">
+      <UniqueIdentifier>9AB131B1-5879-4A64-B040-DE838A18B9A3</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\screencodes_screen">
+      <UniqueIdentifier>CA8B3F40-5FBD-4717-A045-51CB88D887A9</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\screencodes_screen">
+      <UniqueIdentifier>09019D78-BEF0-402B-9CCE-FDF2931A1D1B</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\screencodes_screen">
+      <UniqueIdentifier>7A962CEA-8EAB-4324-8E94-6CA05A048BDF</UniqueIdentifier>
+    </Filter>
     <Filter Include="Source Files\gui\model\Legacy">
-      <UniqueIdentifier>F2C1C45D-1F8B-471B-B9F3-E9CF7DCB20BA</UniqueIdentifier>
+      <UniqueIdentifier>5B2AF1A2-7EF9-4C2C-862B-FCEC1E26E4A1</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -563,6 +575,15 @@
     </ClCompile>
     <ClCompile Include="..\..\generated\gui_generated\src\screenalarme_screen\ScreenAlarmeViewBase.cpp">
       <Filter>Source Files\generated\gui_generated\screenalarme_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\screencodes_screen\ScreenCodesPresenter.cpp">
+      <Filter>Source Files\gui\screencodes_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\screencodes_screen\ScreenCodesView.cpp">
+      <Filter>Source Files\gui\screencodes_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\screencodes_screen\ScreenCodesViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\screencodes_screen</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -1335,6 +1356,15 @@
     </ClInclude>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screenalarme_screen\ScreenAlarmeViewBase.hpp">
       <Filter>Header Files\generated\gui_generated\screenalarme_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\screencodes_screen\ScreenCodesPresenter.hpp">
+      <Filter>Header Files\gui\screencodes_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\screencodes_screen\ScreenCodesView.hpp">
+      <Filter>Header Files\gui\screencodes_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screencodes_screen\ScreenCodesViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\screencodes_screen</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

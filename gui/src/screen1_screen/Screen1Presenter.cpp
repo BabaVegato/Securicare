@@ -18,3 +18,6 @@ void Screen1Presenter::deactivate()
 void Screen1Presenter::nbVoleursChanged(){
 	view.updateWildcard(model->getnbVoleurs());
 }
+void Screen1Presenter::StateChanged(){
+	view.updateWildStatus(model->getState());
+}

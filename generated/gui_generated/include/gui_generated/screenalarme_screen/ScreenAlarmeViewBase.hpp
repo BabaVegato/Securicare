@@ -23,6 +23,29 @@ public:
 
     virtual void setupScreen();
 
+    /*
+     * Custom Action Handlers
+     */
+    virtual void Capteur1BTN()
+    {
+        // Override and implement this function in ScreenAlarmeView
+    }
+
+    virtual void ToutEteindre()
+    {
+        // Override and implement this function in ScreenAlarmeView
+    }
+
+    virtual void Capteur2BTN()
+    {
+        // Override and implement this function in ScreenAlarmeView
+    }
+
+    virtual void Capteur3BTN()
+    {
+        // Override and implement this function in ScreenAlarmeView
+    }
+
 protected:
     FrontendApplication& application() {
         return *static_cast<FrontendApplication*>(Application::getInstance());
@@ -36,17 +59,20 @@ protected:
     touchgfx::Image IMG_Back;
     touchgfx::SwipeContainer swipeContainer_Capteurs;
     touchgfx::Container Capteur3;
-    touchgfx::ToggleButton toggleButton3;
+    touchgfx::ToggleButton toggleButtonCapteur3;
     touchgfx::TextArea TXTCapteur3;
 
     touchgfx::Container Capteur2;
-    touchgfx::ToggleButton toggleButton2;
+    touchgfx::ToggleButton toggleButtonCapteur2;
     touchgfx::TextArea TXTCapteur2;
 
     touchgfx::Container Capteur1;
     touchgfx::ToggleButton toggleButtonCapteur1;
     touchgfx::TextArea TXTCapteur1;
 
+    touchgfx::Button button1;
+    touchgfx::ToggleButton toggleButtonToutEteindre;
+    touchgfx::TextArea textArea1;
 
 private:
 

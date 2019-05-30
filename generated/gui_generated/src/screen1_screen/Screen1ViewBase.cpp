@@ -22,7 +22,7 @@ Screen1ViewBase::Screen1ViewBase() :
     BTN_Go_Screen_Auth.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID));
     BTN_Go_Screen_Auth.setAction(buttonCallback);
 
-    TXT_Bonjour.setXY(28, 16);
+    TXT_Bonjour.setXY(25, 0);
     TXT_Bonjour.setColor(touchgfx::Color::getColorFrom24BitRGB(21, 156, 228));
     TXT_Bonjour.setLinespacing(0);
     TXT_Bonjour.setTypedText(TypedText(T_SINGLEUSEID2));
@@ -30,7 +30,7 @@ Screen1ViewBase::Screen1ViewBase() :
     image1.setXY(32, 257);
     image1.setBitmap(Bitmap(BITMAP_DARK_ICONS_SETTINGS_32_ID));
 
-    TXT_Nb_Voleurs.setXY(42, 81);
+    TXT_Nb_Voleurs.setXY(42, 62);
     TXT_Nb_Voleurs.setColor(touchgfx::Color::getColorFrom24BitRGB(21, 156, 228));
     TXT_Nb_Voleurs.setLinespacing(0);
     TXT_Nb_Voleurs.setAlpha(0);
@@ -46,6 +46,14 @@ Screen1ViewBase::Screen1ViewBase() :
     image2.setXY(175, 256);
     image2.setBitmap(Bitmap(BITMAP_DARK_ICONS_MAP_32_ID));
 
+    TXTStatut.setXY(58, 203);
+    TXTStatut.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    TXTStatut.setLinespacing(0);
+    Unicode::snprintf(TXTStatutBuffer, TXTSTATUT_SIZE, "%s", TypedText(T_SINGLEUSEID37).getText());
+    TXTStatut.setWildcard(TXTStatutBuffer);
+    TXTStatut.resizeToCurrentText();
+    TXTStatut.setTypedText(TypedText(T_SINGLEUSEID36));
+
     add(TILEDIMG_BG_Screen1);
     add(toggleButton1);
     add(BTN_Go_Screen_Auth);
@@ -54,6 +62,7 @@ Screen1ViewBase::Screen1ViewBase() :
     add(TXT_Nb_Voleurs);
     add(BTN_Go_Screen_Alarmes);
     add(image2);
+    add(TXTStatut);
 }
 
 void Screen1ViewBase::setupScreen()

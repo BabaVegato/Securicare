@@ -58,6 +58,8 @@ build/MINGW32_NT-6.2/simulator/main.o: simulator/main.cpp \
  ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/Callback.hpp \
  ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/EasingEquations.hpp \
  ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/widgets/Widget.hpp \
+ ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/transitions/SlideTransition.hpp \
+ ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/widgets/SnapshotWidget.hpp \
  gui/include/gui/common/FrontendApplication.hpp \
  generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp \
  ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/mvp/MVPApplication.hpp \
@@ -107,6 +109,9 @@ build/MINGW32_NT-6.2/simulator/main.o: simulator/main.cpp \
  gui/include/gui/screenalarme_screen/ScreenAlarmePresenter.hpp \
  ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/containers/SwipeContainer.hpp \
  ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/containers/ListLayout.hpp \
+ gui/include/gui/screencodes_screen/ScreenCodesView.hpp \
+ generated/gui_generated/include/gui_generated/screencodes_screen/ScreenCodesViewBase.hpp \
+ gui/include/gui/screencodes_screen/ScreenCodesPresenter.hpp \
  generated/images/include/BitmapDatabase.hpp \
  generated/gui_generated/include/gui_generated/common/SimConstants.hpp \
  ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/platform/driver/touch/SDL2TouchController.hpp \
@@ -231,6 +236,10 @@ generated/gui_generated/include/gui_generated/common/FrontendHeapBase.hpp:
 
 ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/widgets/Widget.hpp:
 
+../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/transitions/SlideTransition.hpp:
+
+../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/widgets/SnapshotWidget.hpp:
+
 gui/include/gui/common/FrontendApplication.hpp:
 
 generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp:
@@ -328,6 +337,12 @@ gui/include/gui/screenalarme_screen/ScreenAlarmePresenter.hpp:
 ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/containers/SwipeContainer.hpp:
 
 ../../Middlewares/ST/TouchGFX/touchgfx//framework/include/touchgfx/containers/ListLayout.hpp:
+
+gui/include/gui/screencodes_screen/ScreenCodesView.hpp:
+
+generated/gui_generated/include/gui_generated/screencodes_screen/ScreenCodesViewBase.hpp:
+
+gui/include/gui/screencodes_screen/ScreenCodesPresenter.hpp:
 
 generated/images/include/BitmapDatabase.hpp:
 

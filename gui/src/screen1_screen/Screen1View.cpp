@@ -22,3 +22,19 @@ void Screen1View::updateWildcard(int val)
 	Unicode::snprintf(TXT_Nb_VoleursBuffer,5,"%d",val);
  	TXT_Nb_Voleurs.invalidate();
 }
+void Screen1View::updateWildStatus(int State)
+{
+	if(State == 0){
+		Unicode::snprintf(TXTStatutBuffer,10,"%c", 'I');
+ 		TXTStatut.invalidate();
+	}
+	if(State == 1){
+		Unicode::snprintf(TXTStatutBuffer,10,"%c", 'A');
+ 		TXTStatut.invalidate();
+	}
+	if(State == 2){
+		Unicode::snprintf(TXTStatutBuffer,10,"%c",'M');
+ 		TXTStatut.invalidate();
+	}
+}
+

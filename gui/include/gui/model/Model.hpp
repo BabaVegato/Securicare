@@ -37,7 +37,9 @@ public:
      * the ModelListener interface.
      */
     void tick();
+
     void updateLEDVERTEState(bool);
+
     int getnbVoleurs() const {return nbVoleurs;}
     int getAuth() const {return auth;}
     int getCodeEntre() const {return codeEntre;}
@@ -47,14 +49,17 @@ public:
     int getColorBarB() const {return ColorBarB;}
 
     int getAlphaTXT() const {return AlphaTXT;}
+    int getState() const {return State;}
 
     void setBTN(char a) {BTN = a;}
+
+    void setCapteur1(bool a){Capteur1 = a;}
+    void setCapteur2(bool a){Capteur2 = a;}
+    void setCapteur3(bool a){Capteur3 = a;}
 
     void BonpasBon();
     void Bleutermediaire();
     void Restart();
-
-
 
 protected:
     /**
@@ -77,6 +82,8 @@ private:
     bool Gagne;
     bool Capteur1, Capteur2, Capteur3;
     char BTN;
+    int State;
+    bool Teleco;
 
     
 };
