@@ -45,9 +45,21 @@ public:
     virtual char getCapteur1();
     virtual char getCapteur2();
     virtual char getCapteur3();
+
     virtual void updateCapteur1();
     virtual void updateCapteur2();
     virtual void updateCapteur3();
+
+    virtual void setCapteur1(bool);
+    virtual void setCapteur2(bool);
+    virtual void setCapteur3(bool);
+
+    virtual void forceBTNStatut(bool);
+
+    virtual void forceCapteur1(bool);
+    virtual void forceCapteur2(bool);
+    virtual void forceCapteur3(bool);
+
 protected:
 	bool Capteur1;
 	bool Capteur2;

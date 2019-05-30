@@ -8,7 +8,20 @@ ScreenAlarmePresenter::ScreenAlarmePresenter(ScreenAlarmeView& v)
 
 void ScreenAlarmePresenter::activate()
 {
+	view.forceCapteur1(model->getCapteur1());
+	view.forceCapteur2(model->getCapteur2());
+	view.forceCapteur3(model->getCapteur3());
 
+	view.setCapteur1(model->getCapteur1());
+	view.setCapteur2(model->getCapteur2());
+	view.setCapteur3(model->getCapteur3());
+
+	if(model->getState() == 0){
+		view.forceBTNStatut(false);
+	}
+	if(model->getState() == 1){
+		view.forceBTNStatut(true);
+	}
 }
 
 void ScreenAlarmePresenter::deactivate()

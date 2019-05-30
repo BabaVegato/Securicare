@@ -48,6 +48,10 @@ public:
     int getColorBarG() const {return ColorBarG;}
     int getColorBarB() const {return ColorBarB;}
 
+    bool getCapteur1() const {return Capteur1;}
+    bool getCapteur2() const {return Capteur2;}
+    bool getCapteur3() const {return Capteur3;}
+
     int getAlphaTXT() const {return AlphaTXT;}
     int getState() const {return State;}
 
