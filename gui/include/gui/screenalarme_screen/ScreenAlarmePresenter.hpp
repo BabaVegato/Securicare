@@ -27,6 +27,10 @@ public:
     virtual void Capteur1Changed();
     virtual void Capteur2Changed();
     virtual void Capteur3Changed();
+
+    virtual void TelecoEteint();
+    virtual void TelecoAllume();
+
     virtual ~ScreenAlarmePresenter() {};
 
 private:

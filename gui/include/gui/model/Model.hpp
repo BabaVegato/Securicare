@@ -87,7 +87,7 @@ private:
     bool Capteur1, Capteur2, Capteur3;
     char BTN;
     int State;
-    bool Teleco;
+    int compteurTeleco;
 
     
 };

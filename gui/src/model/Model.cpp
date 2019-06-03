@@ -6,7 +6,7 @@
 #include <gui/model/stm32f429i_discovery.h>
 
 
-Model::Model() : modelListener(0), nbVoleurs(0), AlphaTXT(0), compteur(0), auth(0), codeTape(false), codeEntre('X'), codeEntre1('X'), codeEntre2('X'), codeEntre3('X'), codeEntre4('X'), codeAdmin1('A'), codeAdmin2('1'), codeAdmin3('B'), codeAdmin4('2'), ColorBarR(0), ColorBarG(0), ColorBarB(0), ilFautRestart(false), Gagne(false), Capteur1(false), Capteur2(false), Capteur3(false), BTN('X'), State(0), Teleco(false)
+Model::Model() : modelListener(0), nbVoleurs(0), AlphaTXT(0), compteur(0), auth(0), codeTape(false), codeEntre('X'), codeEntre1('X'), codeEntre2('X'), codeEntre3('X'), codeEntre4('X'), codeAdmin1('A'), codeAdmin2('1'), codeAdmin3('B'), codeAdmin4('2'), ColorBarR(0), ColorBarG(0), ColorBarB(0), ilFautRestart(false), Gagne(false), Capteur1(false), Capteur2(false), Capteur3(false), BTN('X'), State(0), compteurTeleco(0)
 {
 	RCC->AHB1ENR |= (1 << 2) | (1 << 6) | (1 << 3);
 	
@@ -18,6 +18,7 @@ Model::Model() : modelListener(0), nbVoleurs(0), AlphaTXT(0), compteur(0), auth(
 	GPIOD->MODER &= ~(0x3 << 10); // PD5 Bit 4
 	GPIOD->MODER &= ~(0x3 << 8); // PD4, ToucheTapee
 	GPIOD->MODER &= ~(0x3 << 14); // PD7, Teleco
+	GPIOD->MODER &= ~(0x3 << 14); // PD2, Output
 
 	//GPIOC->MODER &= ~(0x3 << 11); // PC11, Bit 1
 	//GPIOD->MODER &= ~(0x3 << 14); // PD7, Bit 4
@@ -38,12 +39,32 @@ void Model::tick()
 #ifndef SIMULATOR
 
 compteur++;
+compteurTeleco++;
+if (HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_7)){
 
-if (HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_7) && !Teleco){
- 	State = 0;
- 	updateLEDVERTEState(1);
- 	compteur = 0;
- 	Teleco = true;
+	updateLEDVERTEState(1);
+
+	if(State != 0 && compteurTeleco>25){
+		State = 0;
+ 		compteurTeleco = 0;
+
+ 		Capteur1 = false;
+ 		Capteur2 = false;
+ 		Capteur3 = false;
+
+ 		modelListener->TelecoEteint();
+	}
+	if(State == 0 && compteurTeleco>25){
+		State = 1;
+ 		compteurTeleco = 0;
+
+ 		Capteur1 = true;
+ 		Capteur2 = true;
+ 		Capteur3 = true;
+
+ 		modelListener->TelecoAllume();
+	}
+
  	modelListener->StateChanged();
 }
 
@@ -60,6 +81,7 @@ if (HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_4) && compteur>25){
 
 /////
 modelListener->BTNChanged();
+
 modelListener->Capteur1Changed();
 modelListener->Capteur2Changed();
 modelListener->Capteur3Changed();

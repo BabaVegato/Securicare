@@ -37,3 +37,13 @@ void ScreenAlarmePresenter::Capteur2Changed(){
 void ScreenAlarmePresenter::Capteur3Changed(){
 	model->setCapteur3(view.getCapteur3());
 }
+void ScreenAlarmePresenter::TelecoEteint(){
+	view.setCapteur3(false);
+	view.setCapteur2(false);
+	view.setCapteur1(false);
+}
+void ScreenAlarmePresenter::TelecoAllume(){
+	view.setCapteur3(true);
+	view.setCapteur2(true);
+	view.setCapteur1(true);
+}

@@ -37,6 +37,9 @@ public:
     
     virtual void GoToCodes(){};
 
+    virtual void TelecoEteint(){};
+    virtual void TelecoAllume(){};
+
     /**
      * Sets the model pointer to point to the Model object. Called automatically
      * when switching screen.

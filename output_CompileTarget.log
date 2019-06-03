@@ -1,9 +1,11 @@
-Compiling TouchGFX/gui/src/screenalarme_screen/ScreenAlarmeView.cpp
+Converting images
+Compiling TouchGFX/gui/src/screenauth_screen/ScreenAuthView.cpp
 Compiling TouchGFX/gui/src/screenauth_screen/ScreenAuthPresenter.cpp
 Compiling TouchGFX/gui/src/screen1_screen/Screen1Presenter.cpp
+Compiling TouchGFX/gui/src/screenalarme_screen/ScreenAlarmeView.cpp
+Compiling TouchGFX/gui/src/screenalarme_screen/ScreenAlarmePresenter.cpp
 Compiling TouchGFX/gui/src/screen1_screen/Screen1View.cpp
 Compiling TouchGFX/gui/src/common/FrontendApplication.cpp
-Compiling TouchGFX/gui/src/screenalarme_screen/ScreenAlarmePresenter.cpp
 Compiling TouchGFX/gui/src/model/Model.cpp
 Compiling TouchGFX/gui/src/screencodes_screen/ScreenCodesPresenter.cpp
 Compiling TouchGFX/gui/src/screencodes_screen/ScreenCodesView.cpp
