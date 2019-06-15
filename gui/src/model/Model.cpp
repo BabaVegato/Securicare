@@ -6,7 +6,7 @@
 #include <gui/model/stm32f429i_discovery.h>
 
 
-Model::Model() : modelListener(0), nbVoleurs(0), AlphaTXT(0), compteur(0), auth(0), codeTape(false), codeEntre('X'), codeEntre1('X'), codeEntre2('X'), codeEntre3('X'), codeEntre4('X'), codeAdmin1('A'), codeAdmin2('1'), codeAdmin3('B'), codeAdmin4('2'), ColorBarR(0), ColorBarG(0), ColorBarB(0), ilFautRestart(false), Gagne(false), Capteur1(false), Capteur2(false), Capteur3(false), BTN('X'), State(0), compteurTeleco(0)
+Model::Model() : modelListener(0), nbVoleurs(0), AlphaTXT(0), compteur(0), auth(0), codeTape(false), codeEntre('X'), codeEntre1('X'), codeEntre2('X'), codeEntre3('X'), codeEntre4('X'), codeAdmin1('A'), codeAdmin2('1'), codeAdmin3('B'), codeAdmin4('2'), ColorBarR(0), ColorBarG(0), ColorBarB(0), ilFautRestart(false), Gagne(false), Capteur1(false), Capteur2(false), Capteur3(false), BTN('X'), State(0), compteurTeleco(0), CaSonne(false), CodeBon(false)
 {
 	RCC->AHB1ENR |= (1 << 2) | (1 << 6) | (1 << 3);
 	
@@ -15,10 +15,14 @@ Model::Model() : modelListener(0), nbVoleurs(0), AlphaTXT(0), compteur(0), auth(
 	GPIOG->MODER &= ~(0x3 << 4); // PG2 Bit 1
 	GPIOG->MODER &= ~(0x3 << 6); // PG3 Bit 2
 	GPIOG->MODER &= ~(0x3 << 18);// PG9 Bit 3
-	GPIOD->MODER &= ~(0x3 << 10); // PD5 Bit 4
+	GPIOD->MODER &= ~(0x3 << 4); // PD2 Bit 4 ???????????????????????????
 	GPIOD->MODER &= ~(0x3 << 8); // PD4, ToucheTapee
 	GPIOD->MODER &= ~(0x3 << 14); // PD7, Teleco
-	GPIOD->MODER &= ~(0x3 << 14); // PD2, Output
+
+	GPIOC->MODER &= ~(0x3 << 16); // PC8, CodeBon
+
+	GPIOD->MODER &= 0xFFFFF7FF; // PD5, Output
+	GPIOD->MODER |= 0x400; // PD5, Output
 
 	//GPIOC->MODER &= ~(0x3 << 11); // PC11, Bit 1
 	//GPIOD->MODER &= ~(0x3 << 14); // PD7, Bit 4
@@ -31,6 +35,8 @@ Model::Model() : modelListener(0), nbVoleurs(0), AlphaTXT(0), compteur(0), auth(
 
 	GPIOG->MODER &= ~(0x3 << 26); //LED VERTE
 	GPIOG->MODER |= (1 << 26);
+
+
 }
 
 void Model::tick()
@@ -40,6 +46,19 @@ void Model::tick()
 
 compteur++;
 compteurTeleco++;
+
+//IOVOLEURS//////////
+if (HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13) && !CaSonne){
+ 	nbVoleurs++;
+	modelListener->nbVoleursChanged();
+	CaSonne = true;
+}
+if(!HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13)){
+	CaSonne = false;
+}
+
+//TELECO///////////////////
+
 if (HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_7)){
 
 	updateLEDVERTEState(1);
@@ -47,6 +66,8 @@ if (HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_7)){
 	if(State != 0 && compteurTeleco>25){
 		State = 0;
  		compteurTeleco = 0;
+ 		GPIOD -> ODR &= ~GPIO_PIN_5;
+ 		//HAL_GPIO_WritePin(GPIOD, GPIO_PIN_2, GPIO_PIN_SET);
 
  		Capteur1 = false;
  		Capteur2 = false;
@@ -57,6 +78,8 @@ if (HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_7)){
 	if(State == 0 && compteurTeleco>25){
 		State = 1;
  		compteurTeleco = 0;
+ 		GPIOD -> ODR |= GPIO_PIN_5;
+ 		//HAL_GPIO_WritePin(GPIOD, GPIO_PIN_2, GPIO_PIN_SET);
 
  		Capteur1 = true;
  		Capteur2 = true;
@@ -68,7 +91,34 @@ if (HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_7)){
  	modelListener->StateChanged();
 }
 
-//IOCODETAPE
+///////////////////////////////////
+
+if (HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_8) != CodeBon){
+
+	updateLEDVERTEState(1);
+
+	State = 0;
+ 	GPIOD -> ODR &= ~GPIO_PIN_5;
+ 			//HAL_GPIO_WritePin(GPIOD, GPIO_PIN_2, GPIO_PIN_SET);
+
+ 	Capteur1 = false;
+	Capteur2 = false;
+ 	Capteur3 = false;
+
+	modelListener->TelecoEteint();
+
+ 	CodeBon = HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_8);
+
+ 	modelListener->StateChanged();
+}
+if(HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_8) == CodeBon){
+	updateLEDVERTEState(0);
+}
+
+
+
+
+//IOCODETAPE//////////
 if(compteur>25){
 	if(ilFautRestart == true){
 		Restart();
@@ -79,7 +129,7 @@ if (HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_4) && compteur>25){
 	codeTape = true;
 }
 
-/////
+/////////////////////
 modelListener->BTNChanged();
 
 modelListener->Capteur1Changed();
@@ -109,62 +159,56 @@ if(BTN != 'X'){
 }
 //
 if(compteur>25 && codeTape && !Gagne){
-
-	//IOVoleurs
-	if (HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13)){
- 		nbVoleurs++;
-		modelListener->nbVoleursChanged();
-	}
  	/////
 
 
 	//PROCESS TOUCHE ////// BIT 1 = PG2 ; BIT 2 = PG3 ; BIT 3 = PG9 ; BIT 4 = PD5
-	if (!HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_2) && !HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_3) && !HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_9) && !HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_5)){
+	if (!HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_2) && !HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_3) && !HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_9) && !HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_2)){
  		codeEntre = '0';
  	}
- 	if (HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_2) && !HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_3) && !HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_9) && !HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_5)){
+ 	if (HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_2) && !HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_3) && !HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_9) && !HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_2)){
  		codeEntre = '1';
  	}
- 	if (!HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_2) && HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_3) && !HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_9) && !HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_5)){
+ 	if (!HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_2) && HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_3) && !HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_9) && !HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_2)){
  		codeEntre = '2';
  	}
- 	if (HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_2) && HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_3) && !HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_9) && !HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_5)){
+ 	if (HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_2) && HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_3) && !HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_9) && !HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_2)){
  		codeEntre = '3';
  	}
- 	if (!HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_2) && !HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_3) && HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_9) && !HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_5)){
+ 	if (!HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_2) && !HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_3) && HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_9) && !HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_2)){
  		codeEntre = '4';
  	}
- 	if (HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_2) && !HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_3) && HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_9) && !HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_5)){
+ 	if (HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_2) && !HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_3) && HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_9) && !HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_2)){
  		codeEntre = '5';
  	}
- 	if (!HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_2) && HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_3) && HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_9) && !HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_5)){
+ 	if (!HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_2) && HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_3) && HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_9) && !HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_2)){
  		codeEntre = '6';
  	}
- 	if (HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_2) && HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_3) && HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_9) && !HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_5)){
+ 	if (HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_2) && HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_3) && HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_9) && !HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_2)){
  		codeEntre = '7';
  	}
- 	if (!HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_2) && !HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_3) && !HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_9) && HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_5)){
+ 	if (!HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_2) && !HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_3) && !HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_9) && HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_2)){
  		codeEntre = '8';
  	}
- 	if (HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_2) && !HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_3) && !HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_9) && HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_5)){
+ 	if (HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_2) && !HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_3) && !HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_9) && HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_2)){
  		codeEntre = '9';
  	}
- 	if (!HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_2) && HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_3) && !HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_9) && HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_5)){
+ 	if (!HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_2) && HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_3) && !HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_9) && HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_2)){
  		codeEntre = 'A';
  	}
- 	if (HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_2) && HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_3) && !HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_9) && HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_5)){
+ 	if (HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_2) && HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_3) && !HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_9) && HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_2)){
  		codeEntre = 'B';
  	}
- 	if (!HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_2) && !HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_3) && HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_9) && HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_5)){
+ 	if (!HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_2) && !HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_3) && HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_9) && HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_2)){
  		codeEntre = 'C';
  	}
- 	if (HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_2) && !HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_3) && HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_9) && HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_5)){
+ 	if (HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_2) && !HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_3) && HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_9) && HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_2)){
  		codeEntre = 'D';
  	}
- 	if (!HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_2) && HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_3) && HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_9) && HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_5)){
+ 	if (!HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_2) && HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_3) && HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_9) && HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_2)){
  		codeEntre = 'E';
  	}
- 	if (HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_2) && HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_3) && HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_9) && HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_5)){
+ 	if (HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_2) && HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_3) && HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_9) && HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_2)){
  		codeEntre = 'F';
  	}
 

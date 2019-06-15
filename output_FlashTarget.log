@@ -18,8 +18,8 @@ Flash Programming:
   File : TouchGFX/build/bin/intflash.hex
   Address : 0x08000000
 Memory programming...
-±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± 0% 0%€€€€€€€€€€€€€ 26%€€€€€€€€€€€€€ 52%€€€€€€€€€€€€€ 78%€€€€€€€€€€€ 100%
-Memory programmed in 17s and 484ms.
+±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± 0% 0%€€€€€€€€€€€€€ 26%€€€€€€€€€€€€€ 52%€€€€€€€€€€€€ 77%€€€€€€€€€€€€ 100%
+Memory programmed in 17s and 515ms.
 Programming Complete.
 
 MCU Reset.

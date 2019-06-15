@@ -88,6 +88,8 @@ private:
     char BTN;
     int State;
     int compteurTeleco;
+    bool CaSonne;
+    bool CodeBon;
 
     
 };
